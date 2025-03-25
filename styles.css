@@ -1,4 +1,9 @@
 /* Base Styles */
+html {
+  scroll-padding-top: 6rem; /* Adjust based on your navbar height */
+  scroll-behavior: smooth;
+}
+
 :root {
   --color-tan: #FAF8ED;
   --color-forest: #133925;
@@ -492,8 +497,8 @@ nav {
   margin-top: 2rem;
 }
 
-.partner-logo {
-  height: 4rem;
+.partner-logos {
+  height: 6rem;
 }
 
 /* Footer */
