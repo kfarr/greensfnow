@@ -607,3 +607,21 @@ nav {
     transform: rotate(360deg);
   }
 }
+
+/* Past Events Styling */
+.past-events .events-intro,
+.past-events .event-title,
+.past-events .event-time,
+.past-events .event-location,
+.past-events .event-description {
+  color: #888 !important;
+  text-decoration: line-through;
+}
+
+.past-events .event-card {
+  opacity: 0.7;
+}
+
+.past-events .event-date {
+  background-color: #999;
+}
