@@ -1,5 +1,19 @@
 /* Blog Specific Styles */
 
+/* Styling for regular links in blog post text */
+.post-text a {
+  color: var(--color-fern);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: all 0.2s ease;
+}
+
+.post-text a:hover {
+  color: var(--color-forest);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
 /* Fix for navbar obscuring anchored content */
 :target {
   scroll-margin-top: 4rem; /* Slightly more than the navbar height to add some spacing */
