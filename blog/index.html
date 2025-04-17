@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Green SF Now Blog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="blog-styles.css">
+</head>
+
+<body>
+  <nav class="bg-tan sticky">
+    <div class="nav-container">
+      <a href="/" class="logo">
+        <img src="../images/green-sf-now-logo.png" alt="Green SF Now Logo" class="logo-img">
+      </a>
+      <div class="menu">
+        <button class="mobile-menu-button">
+          <span class="sr-only">Open main menu</span>
+          <svg class="menu-icon" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+        <div class="nav-links">
+          <a href="../#what" class="nav-link">What</a>
+          <a href="../#why" class="nav-link">Why</a>
+          <a href="../#events" class="nav-link">Events</a>
+          <a href="../#contact" class="nav-link">Contact</a>
+          <a href="/blog/" class="nav-link">Blog</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Blog Header Section -->
+    <section class="blog-header">
+      <div class="section-container">
+        <h1 class="blog-title">Green SF Now Blog</h1>
+        <p class="blog-description">Updates on our journey for sustainable green infrastructure in San Francisco</p>
+      </div>
+    </section>
+
+    <!-- Blog Posts Section -->
+    <section class="blog-posts">
+      <div class="section-container">
+        
+        <!-- Blog Post 1 -->
+        <article id="2025-04-15" class="blog-post">
+          <div class="post-header">
+            <h2 class="post-title">More Parklets, More Green</h2>
+            <div class="post-meta">
+              <a href="#2025-04-15" class="date-permalink">
+                <time datetime="2025-04-15">Tue Apr 15, 2025</time>
+              </a>
+            </div>
+          </div>
+          <div class="post-content">
+            <div class="post-image-container">
+              <a href="Building Blocks Parklet Opening.jpg"><img src="Building Blocks Parklet Opening.jpg" alt="City Block Parklets" class="post-image"></a>
+            </div>
+            <div class="post-text">
+              <p>What a thrill to see SF New Deal's Building Blocks parklet program launch at Excelsior Coffee on a foggy Tuesday morning! The energy was electric as Lea Sabado and her son cut the ribbon on their bright yellow modular parklet, bringing "light green" infrastructure to life in the Excelsior District.
+                As I chatted with Hoh Chen from SF New Deal, I was struck by how this Lego-inspired approach tackles both environmental and economic challenges. At just $400 monthly instead of the $60,000 upfront cost, these parklets are accessible to small businesses and community groups alike.
+                The beauty of this system is how perfectly it aligns with our Green SF Now mission. These parklets are quintessential "light green" infrastructure, creating planted spaces that absorb rainwater, create community spaces, add biodiversity, and naturally calm traffic. The yellow sides of Excelsior Coffee's installation aren't just eye-catching; they're functional planters bringing nature back to our concrete corridors.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Blog Post 2 -->
+        <article id="2025-04-12" class="blog-post">
+          <div class="post-header">
+            <h2 class="post-title">Green SF Now at Sunset Dunes</h2>
+            <div class="post-meta">
+              <a href="#2025-04-12" class="date-permalink">
+                <time datetime="2025-04-12">Sat Apr 12, 2025</time>
+              </a>
+            </div>
+          </div>
+          <div class="post-content">
+            <div class="post-image-container">
+              <a href="Sunset Dunes Opening Party.jpg"><img src="Sunset Dunes Opening Party.jpg" alt="Sunset Dunes Opening Party" class="post-image"></a>
+            </div>
+            <div class="post-text">
+              <p>The Sunset Dunes Park opening celebration was a remarkable success for our Green SF Now initiative! Our Sierra Club volunteers Terry, Vicky, Elizabeth, Brian, Kieran, and others helped create an incredible presence at this community event.
+                The turnout exceeded our expectations with nearly 100 on-site registrations at our table and Green SF Now displays. Dozens more signed up for our guided nature walk, thanks Brian for organizing these!</p>
+              <p>We're excited to continue our momentum with upcoming events. Thanks to all our dedicated volunteers who make these community activations possible.</p>
+            </div>
+          </div>
+        </article>
+        
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <span>© 2025 Green SF Now</span>
+        <div class="footer-links">
+          <a href="../#what" class="footer-link">What</a>
+          <a href="../#why" class="footer-link">Why</a>
+          <a href="../#events" class="footer-link">Events</a>
+          <a href="../#contact" class="footer-link">Contact</a>
+          <a href="https://github.com/kfarr/greensfnow" class="footer-link">Edit on Github</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Simple mobile menu toggle
+    document.querySelector('.mobile-menu-button').addEventListener('click', function () {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+  </script>
+</body>
+
+</html>
