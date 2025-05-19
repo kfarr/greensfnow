@@ -480,6 +480,15 @@ nav {
   background-color: #4A6D2E;
 }
 
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
 .direct-contact {
   text-align: center;
   margin-top: 1rem;
