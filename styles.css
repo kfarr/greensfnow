@@ -199,6 +199,7 @@ nav {
 .hero-image {
   margin-top: 4rem;
   width: 100%;
+  opacity: 0.7;
   max-width: 600px;
   mix-blend-mode: darken;
 }
