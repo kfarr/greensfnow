@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Treat Plaza - Green SF Now</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .project-hero {
+      background: linear-gradient(135deg, var(--color-fern) 0%, var(--color-fern-light) 100%);
+      color: var(--color-tan);
+      padding: 4rem 2rem;
+    }
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: flex-start;
+    }
+    .hero-text h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .hero-text p {
+      font-size: 1.25rem;
+      max-width: 600px;
+    }
+    .hero-cta {
+      background: var(--color-forest);
+      padding: 2rem;
+      border-radius: 0.5rem;
+      min-width: 300px;
+    }
+    .hero-cta h3 {
+      color: var(--color-tan);
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .hero-cta-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .project-details {
+      display: grid;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .project-detail-card {
+      background: var(--color-tan);
+      padding: 2rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .project-detail-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--color-forest);
+    }
+    .map-container {
+      background: #f8f9fa;
+      border: 2px dashed var(--color-fern);
+      border-radius: 0.5rem;
+      padding: 2rem;
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .cta-section {
+      background: var(--color-forest);
+      color: var(--color-tan);
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .cta-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .cta-button {
+      background: var(--color-fern);
+      color: var(--color-tan);
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 0.5rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .cta-button:hover {
+      background: var(--color-fern-light);
+      color: var(--color-forest);
+      transform: translateY(-2px);
+    }
+    .gallery-grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      margin: 2rem 0;
+    }
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 0.5rem;
+      aspect-ratio: 4/3;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+    .gallery-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(0,0,0,0.7));
+      color: white;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+    .breadcrumb {
+      background: var(--color-tan);
+      padding: 1rem 2rem;
+      border-bottom: 1px solid var(--color-fern-light);
+    }
+    .breadcrumb a {
+      color: var(--color-fern);
+    }
+    @media (min-width: 768px) {
+      .hero-content {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+      }
+      .hero-text {
+        flex: 1;
+        margin-right: 2rem;
+      }
+      .project-details {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .cta-buttons {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="bg-tan sticky">
+    <div class="nav-container">
+      <a href="/" class="logo">
+        <img src="/images/green-sf-now-sierra-club-grassroots.webp" alt="Green SF Now Logo" class="logo-img">
+      </a>
+      <div class="menu">
+        <button class="mobile-menu-button">
+          <span class="sr-only">Open main menu</span>
+          <svg class="menu-icon" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+        <div class="nav-links">
+          <a href="/#what" class="nav-link">What</a>
+          <a href="/#why" class="nav-link">Why</a>
+          <a href="/#events" class="nav-link">Events</a>
+          <a href="/blog/" class="nav-link">Blog</a>
+          <a href="/#contact" class="nav-link">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="breadcrumb">
+    <a href="/">Home</a> &gt; <a href="/projects/">Projects</a> &gt; Treat Plaza
+  </div>
+
+  <main>
+    <section class="project-hero">
+      <div class="section-container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Treat Plaza</h1>
+            <p>Transforming a contested sewer construction site into a community green space in San Francisco's Mission District</p>
+          </div>
+          <div class="hero-cta">
+            <h3>Take Action to Support This Project</h3>
+            <div class="hero-cta-buttons">
+              <a href="mailto:info@greensfnow.org?subject=Support%20for%20Treat%20Plaza%20Project" class="cta-button">
+                📧 Send Letter of Support
+              </a>
+              <a href="mailto:info@greensfnow.org?subject=Treat%20Plaza%20Stewardship" class="cta-button">
+                🤝 Contact the Steward
+              </a>
+              <a href="https://www.sierraclub.org/sfbay/donate" target="_blank" class="cta-button">
+                💚 Donate to This Project
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-container">
+        <div class="project-details">
+          <div class="project-detail-card">
+            <h3>📍 Location</h3>
+            <p><strong>Address:</strong> 16th Street and Harrison Street at Treat Avenue<br>
+            <strong>Neighborhood:</strong> Mission District, San Francisco<br>
+            <strong>Transit:</strong> Near 16th Street BART Station</p>
+          </div>
+
+          <div class="project-detail-card">
+            <h3>🌱 Project Overview</h3>
+            <p>Treat Plaza represents a unique opportunity to transform a site of infrastructure controversy into a community asset. This space can demonstrate how green infrastructure solutions can address both environmental and social needs while creating a vibrant neighborhood gathering place.</p>
+          </div>
+
+          <div class="project-detail-card">
+            <h3>🤝 Supporters & Advocates</h3>
+            <p><strong>Lead Advocates:</strong> Green SF Now, Sierra Club SF Bay Chapter<br>
+            <strong>Community Partners:</strong> Evolved SF, Treat Past Present Future Artists<br>
+            <strong>Neighborhood Support:</strong> Mission District residents and local businesses</p>
+          </div>
+
+          <div class="project-detail-card">
+            <h3>💰 Potential Funding Sources</h3>
+            <p><strong>City Programs:</strong> SF Public Works Community Challenge Grant<br>
+            <strong>State Funding:</strong> California Urban Greening Program<br>
+            <strong>Federal:</strong> EPA Environmental Justice Grants<br>
+            <strong>Private:</strong> Local business sponsorships, community fundraising</p>
+          </div>
+        </div>
+
+        <div class="map-container">
+          <h3>🗺️ Site Location Map</h3>
+          <p><em>Interactive map showing Treat Plaza location and surrounding green infrastructure opportunities</em></p>
+          <p>16th & Harrison @ Treat Avenue, Mission District</p>
+          <small>Map integration coming soon</small>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="/blog/treat-plaza-may-17-2025-final.webp" alt="Treat Plaza community event">
+            <div class="gallery-caption">
+              Community activation event at Treat Plaza - May 2025
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="/blog/treat-past-present-future-panels.webp" alt="Treat Plaza artistic panels">
+            <div class="gallery-caption">
+              Treat Past Present Future artistic panels highlighting community vision
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="/blog/Green SF at Treat Plaza April.jpg" alt="Green SF Now at Treat Plaza">
+            <div class="gallery-caption">
+              Green SF Now community engagement and education
+            </div>
+          </div>
+        </div>
+
+        <div class="project-detail-card">
+          <h3>🎯 Project Goals</h3>
+          <ul>
+            <li><strong>Stormwater Management:</strong> Install bioswales and permeable surfaces to reduce runoff</li>
+            <li><strong>Community Space:</strong> Create a gathering place for neighborhood events and activities</li>
+            <li><strong>Urban Heat Reduction:</strong> Add trees and vegetation to cool the urban environment</li>
+            <li><strong>Air Quality:</strong> Improve local air quality through increased vegetation</li>
+            <li><strong>Safe Streets:</strong> Implement traffic calming measures and improved pedestrian safety</li>
+            <li><strong>Biodiversity:</strong> Introduce native plants to support local wildlife</li>
+          </ul>
+        </div>
+
+        <div class="project-detail-card">
+          <h3>📈 Current Status</h3>
+          <p><strong>Phase:</strong> Community Engagement & Planning<br>
+          <strong>Next Steps:</strong> Secure funding, finalize design, begin construction<br>
+          <strong>Timeline:</strong> Construction anticipated 2025-2026<br>
+          <strong>Recent Activity:</strong> Regular community events and advocacy activities</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <span>© 2025 Green SF Now</span>
+        <div class="footer-links">
+          <a href="/#what" class="footer-link">What</a>
+          <a href="/#why" class="footer-link">Why</a>
+          <a href="/#events" class="footer-link">Events</a>
+          <a href="/blog/" class="footer-link">Blog</a>
+          <a href="/#contact" class="footer-link">Contact</a>
+          <a href="https://github.com/kfarr/greensfnow" class="footer-link">Edit on Github</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Simple mobile menu toggle
+    document.querySelector('.mobile-menu-button').addEventListener('click', function () {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+  </script>
+</body>
+
+</html>
