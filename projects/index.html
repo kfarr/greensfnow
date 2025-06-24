@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Featured Projects - Green SF Now</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .projects-hero {
+      background: linear-gradient(135deg, var(--color-fern) 0%, var(--color-fern-light) 100%);
+      color: var(--color-tan);
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .projects-hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .projects-grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      margin-top: 2rem;
+    }
+    .project-card {
+      background: var(--color-tan);
+      border-radius: 0.5rem;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+    .project-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .project-content {
+      padding: 1.5rem;
+    }
+    .project-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--color-forest);
+    }
+    .project-location {
+      color: var(--color-fern);
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+    .project-description {
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+    .project-stats {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+      font-size: 0.9rem;
+    }
+    .project-stat {
+      text-align: center;
+    }
+    .project-stat-value {
+      font-weight: 600;
+      color: var(--color-forest);
+    }
+    .project-cta {
+      background: var(--color-fern);
+      color: var(--color-tan);
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 0.25rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      text-decoration: none;
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+    }
+    .project-cta:hover {
+      background: #4A6D2E;
+      text-decoration: none;
+    }
+    .breadcrumb {
+      background: var(--color-tan);
+      padding: 1rem 2rem;
+      border-bottom: 1px solid var(--color-fern-light);
+    }
+    .breadcrumb a {
+      color: var(--color-fern);
+    }
+    .coming-soon {
+      opacity: 0.7;
+      position: relative;
+    }
+    .coming-soon::after {
+      content: 'Coming Soon';
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: var(--color-fern);
+      color: var(--color-tan);
+      padding: 0.25rem 0.5rem;
+      border-radius: 0.25rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="bg-tan sticky">
+    <div class="nav-container">
+      <a href="/" class="logo">
+        <img src="/images/green-sf-now-sierra-club-grassroots.webp" alt="Green SF Now Logo" class="logo-img">
+      </a>
+      <div class="menu">
+        <button class="mobile-menu-button">
+          <span class="sr-only">Open main menu</span>
+          <svg class="menu-icon" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+        <div class="nav-links">
+          <a href="/projects/" class="nav-link">Projects</a>
+          <a href="/#events" class="nav-link">Events</a>
+          <a href="/blog/" class="nav-link">Blog</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="breadcrumb">
+    <a href="/">Home</a> &gt; Projects
+  </div>
+
+  <main>
+    <section class="projects-hero">
+      <div class="section-container">
+        <h1>Featured Projects</h1>
+        <p>Discover our ongoing green infrastructure initiatives across San Francisco. Each project demonstrates how we can transform our city with sustainable, community-centered solutions.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-container">
+        <div class="projects-grid">
+          
+          <div class="project-card">
+            <img src="/blog/treat-plaza-may-17-2025-final.webp" alt="Treat Plaza North" class="project-image">
+            <div class="project-content">
+              <h3 class="project-title">Treat Plaza North</h3>
+              <p class="project-location">📍 Mission District • 16th & Harrison @ Treat North</p>
+              <p class="project-description">
+                Transforming a contested sewer construction site into a vibrant community green space that demonstrates innovative stormwater management and creates a neighborhood gathering place.
+              </p>
+              <div class="project-stats">
+                <div class="project-stat">
+                  <div class="project-stat-value">Active</div>
+                  <div>Status</div>
+                </div>
+                <div class="project-stat">
+                  <div class="project-stat-value">2025-26</div>
+                  <div>Timeline</div>
+                </div>
+                <div class="project-stat">
+                  <div class="project-stat-value">High</div>
+                  <div>Impact</div>
+                </div>
+              </div>
+              <a href="/projects/treat-plaza.html" class="project-cta">Learn More & Take Action</a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <img src="/images/steiner-street-wiggle.jpg" alt="Steiner Street Promenade" class="project-image">
+            <div class="project-content">
+              <h3 class="project-title">Steiner Street Promenade</h3>
+              <p class="project-location">📍 Castro/Duboce • Steiner between Duboce & Waller</p>
+              <p class="project-description">
+                Creating a pedestrian and bike-friendly eastern edge of Duboce Park with permeable surfaces and stormwater management, while enhancing access for elderly, disabled, and low-income neighbors.
+              </p>
+              <div class="project-stats">
+                <div class="project-stat">
+                  <div class="project-stat-value">Planning</div>
+                  <div>Status</div>
+                </div>
+                <div class="project-stat">
+                  <div class="project-stat-value">2025-26</div>
+                  <div>Timeline</div>
+                </div>
+                <div class="project-stat">
+                  <div class="project-stat-value">High</div>
+                  <div>Impact</div>
+                </div>
+              </div>
+              <a href="/projects/steiner-street.html" class="project-cta">Learn More & Take Action</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-fern-light">
+      <div class="section-container">
+        <h2 class="section-title">Get Involved</h2>
+        <p style="text-align: center; margin-bottom: 2rem;">
+          Want to propose a new project or support an existing one? We're always looking for community partners, volunteers, and advocates.
+        </p>
+        <div style="text-align: center;">
+          <a href="/#contact" class="btn btn-large">Contact Us About Projects</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <span>© 2025 Green SF Now</span>
+        <div class="footer-links">
+          <a href="/#what" class="footer-link">What</a>
+          <a href="/#why" class="footer-link">Why</a>
+          <a href="/#contact" class="footer-link">Contact</a>
+          <a href="https://github.com/kfarr/greensfnow" class="footer-link">Edit on Github</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Simple mobile menu toggle
+    document.querySelector('.mobile-menu-button').addEventListener('click', function () {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+  </script>
+</body>
+
+</html>
