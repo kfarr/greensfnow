@@ -28,11 +28,9 @@
           </svg>
         </button>
         <div class="nav-links">
-          <a href="/#what" class="nav-link">What</a>
-          <a href="/#why" class="nav-link">Why</a>
+          <a href="/projects/" class="nav-link">Projects</a>
           <a href="/#events" class="nav-link">Events</a>
           <a href="/blog/" class="nav-link">Blog</a>
-          <a href="/#contact" class="nav-link">Contact</a>
         </div>
       </div>
     </div>
@@ -408,8 +406,6 @@ Our earlier meeting on May 16th with Assemblymember Haney's staff provided valua
         <div class="footer-links">
           <a href="/#what" class="footer-link">What</a>
           <a href="/#why" class="footer-link">Why</a>
-          <a href="/#events" class="footer-link">Events</a>
-          <a href="/blog/" class="footer-link">Blog</a>
           <a href="/#contact" class="footer-link">Contact</a>
           <a href="https://github.com/kfarr/greensfnow" class="footer-link">Edit on Github</a>
         </div>
