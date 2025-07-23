@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Steiner Street Promenade - Green SF Now</title>
+  <title>Wiggle Plaza - Green SF Now</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -187,7 +187,7 @@
   </nav>
 
   <div class="breadcrumb">
-    <a href="/">Home</a> &gt; <a href="/projects/">Projects</a> &gt; Steiner Street Promenade
+    <a href="/">Home</a> &gt; <a href="/projects/">Projects</a> &gt; Wiggle Plaza
   </div>
 
   <main>
@@ -195,18 +195,18 @@
       <div class="section-container">
         <div class="hero-content">
           <div class="hero-text">
-            <h1>Steiner Street Promenade</h1>
-            <p>Creating the Duboce Park Promenade - a pedestrian and bike-friendly eastern edge of Duboce Park with deep greening and permeable surfaces</p>
+            <h1>Wiggle Plaza</h1>
+            <p>This project extends Duboce Park eastward, creating an accessible space for all ages and abilities while managing stormwater runoff from both Duboce Park and Buena Vista Park</p>
           </div>
           <div class="hero-cta">
             <h3>Take Action to Support This Project</h3>
             <div class="hero-cta-buttons">
-              <a href="mailto:info@greensfnow.org?subject=Support%20for%20Steiner%20Street%20Promenade" class="cta-button">
+              <button onclick="generateSupportEmail()" class="cta-button">
                 📧 Send Letter of Support
-              </a>
-              <a href="mailto:doug@slowsteiner.com?subject=Steiner%20Street%20Promenade%20Inquiry" class="cta-button">
+              </button>
+              <button onclick="contactSteward()" class="cta-button">
                 🤝 Contact the Steward
-              </a>
+              </button>
               <!-- <a href="https://www.sierraclub.org/sfbay/donate" target="_blank" class="cta-button">
                 💚 Donate to This Project
               </a> -->
@@ -228,7 +228,7 @@
 
           <div class="project-detail-card">
             <h3>🌱 Project Overview</h3>
-            <p>The Steiner Street Promenade will transform a critical section of the Wiggle bike route into a model of deep greening and permeable surface infrastructure. This project extends Duboce Park eastward, creating an accessible space for all ages and abilities while managing stormwater runoff from Buena Vista Park.</p>
+            <p>Wiggle Plaza extends Duboce Park eastward, creating an accessible space for all ages and abilities while managing stormwater runoff from both Duboce Park and Buena Vista Park. This project transforms a critical section of the Wiggle bike route into a model of deep greening and permeable surface infrastructure.</p>
           </div>
 
           <div class="project-detail-card">
@@ -248,17 +248,20 @@
           </div>
         </div>
 
-        <div class="map-container">
+        <div class="project-detail-card">
           <h3>🗺️ Site Location Map</h3>
-          <p><em>Interactive map showing Steiner Street Promenade location and connection to Duboce Park</em></p>
-          <p>Steiner Street between Duboce Avenue and Waller Street</p>
-          <small>Map integration coming soon</small>
+          <p><strong>Location:</strong> Steiner Street between Duboce Avenue and Waller Street<br>
+          <strong>Connection:</strong> Extends Duboce Park eastward along the Wiggle bike route</p>
+          
+          <iframe width="100%" height="400" frameborder="0" title="Felt Map" src="https://felt.com/embed/map/Green-SF-Now-Priority-Greening-Projects-h9CNPq7OVQKaRNJy7i2H5kC?loc=37.770345%2C-122.431999%2C17.16z&legend=0&cooperativeGestures=0&link=1&geolocation=1&zoomControls=1&scaleBar=1" allow="geolocation" referrerpolicy="strict-origin-when-cross-origin" style="border-radius: 0.5rem; margin: 1rem 0;"></iframe>
+          
+          <p><em>Interactive map showing Wiggle Plaza location within the broader Green SF Now priority greening projects context, highlighting its connection to Duboce Park and the Wiggle bike route.</em></p>
         </div>
 
         <div class="project-detail-card">
           <h3>🎯 Why This Location is Ideal</h3>
           <ul>
-            <li><strong>Stormwater Management:</strong> Captures rainwater flowing down from Buena Vista Park, reducing strain on the sewer system</li>
+            <li><strong>Stormwater Management:</strong> Captures rainwater flowing down from Buena Vista Park and Duboce Park, reducing strain on the sewer system</li>
             <li><strong>Equity & Access:</strong> Serves hundreds of elderly, disabled, minority, LGBTQ+, and low-income neighbors in nearby Bridge Buildings</li>
             <li><strong>Active Transportation:</strong> Critical leg of the Wiggle bike route used by families and commuters daily</li>
             <li><strong>Tourism & Economy:</strong> Part of proposed SF Café District with tree-lined streets and Victorian architecture</li>
@@ -298,9 +301,21 @@
           <h3>📸 Project Gallery</h3>
           <div class="gallery-grid">
             <div class="gallery-item">
-              <img src="steiner1.jpg" alt="Steiner Street Promenade">
+              <img src="images/wiggle-fest-kid-bike-training-program.jpg" alt="Wiggle Fest kid bike training program">
               <div class="gallery-caption">
-                Steiner Street Promenade project visualization
+                Wiggle Fest kid bike training program - demonstrating community support for family-friendly cycling
+              </div>
+            </div>
+            <div class="gallery-item">
+              <img src="images/wigglefest-kids-dancing.jpg" alt="Wiggle Fest kids dancing">
+              <div class="gallery-caption">
+                Wiggle Fest community celebration - kids dancing and enjoying the space
+              </div>
+            </div>
+            <div class="gallery-item">
+              <img src="images/painted-safety-zone-curbside-daylighting-space-example.jpg" alt="Painted safety zone example">
+              <div class="gallery-caption">
+                Example of painted safety zone and curbside daylighting space design concepts
               </div>
             </div>
           </div>
@@ -329,6 +344,58 @@
     document.querySelector('.mobile-menu-button').addEventListener('click', function () {
       document.querySelector('.nav-links').classList.toggle('active');
     });
+
+    // Generate support email for Wiggle Plaza
+    function generateSupportEmail() {
+      const recipients = [
+        'mandelmanstaff@sfgov.org',
+        'daniel.lurie@sfgov.org',
+        'julie.kirschbaum@sfmta.com',
+        'alexandra.c.sweet@sfgov.org',
+        'carla.short@sfdpw.org'
+      ];
+
+      const ccRecipients = [];
+
+      const bccRecipients = [
+        'kieran.farr@gmail.com',
+        'doug@slowsteiner.com'
+      ];
+
+      const subject = "I support Wiggle Plaza - Extending Duboce Park Eastward!";
+
+      const emailBody = `Dear Mayor Lurie, Supervisor Mandelman, and City agency staff,
+
+As a resident of San Francisco, I'm reaching out to express my strong support for the Wiggle Plaza project that would extend Duboce Park eastward along Steiner Street between Duboce Avenue and Waller Street.
+
+This innovative project addresses multiple community needs simultaneously by creating an accessible space for all ages and abilities while managing stormwater runoff from both Duboce Park and Buena Vista Park. The project transforms a critical section of the Wiggle bike route into a model of deep greening and permeable surface infrastructure.
+
+The community support for this project has been demonstrated through the annual Wiggle Fest block party, signatures from local merchants, and strong backing from nearby schools, churches, and neighbors. This project serves hundreds of elderly, disabled, minority, LGBTQ+, and low-income neighbors in nearby Bridge Buildings while supporting families and commuters who use this critical transportation corridor daily.
+
+I understand that Supervisor Mandelman is currently funding an SFMTA study as part of the Biking and Rolling Plan to make Steiner between Duboce and Waller a Slow Street. I encourage you to ensure this study incorporates the green infrastructure and stormwater management benefits that Wiggle Plaza would provide.
+
+This project aligns perfectly with San Francisco's climate goals, transportation objectives, and commitment to creating equitable green spaces for all residents.
+
+If you're not familiar with the project details, please visit: https://greensfnow.org/projects/wiggle-plaza.html
+
+I hope we can count on your support for bringing this essential green infrastructure project to our community.
+
+Thank you for your time and consideration.
+
+Sincerely,`;
+
+      // Create mailto URL with all recipients
+      const mailtoUrl = `mailto:${recipients.join(',')}?cc=${ccRecipients.join(',')}&bcc=${bccRecipients.join(',')}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+      
+      // Open email client
+      window.location.href = mailtoUrl;
+    }
+
+    // Contact steward email
+    function contactSteward() {
+      const mailtoUrl = 'mailto:doug@slowsteiner.com?subject=Wiggle%20Plaza%20Inquiry';
+      window.location.href = mailtoUrl;
+    }
   </script>
 </body>
 
