@@ -32,10 +32,16 @@
       overflow: hidden;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+      display: block;
     }
     .project-card:hover {
       transform: translateY(-8px);
       box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+      text-decoration: none;
+      color: inherit;
     }
     .project-image {
       width: 100%;
@@ -159,7 +165,7 @@
       <div class="section-container">
         <div class="projects-grid">
           
-          <div class="project-card">
+          <a href="/projects/treat-plaza.html" class="project-card">
             <img src="/blog/treat-plaza-may-17-2025-final.webp" alt="Treat Plaza North" class="project-image">
             <div class="project-content">
               <h3 class="project-title">Treat Plaza North</h3>
@@ -181,11 +187,11 @@
                   <div>Impact</div>
                 </div>
               </div>
-              <a href="/projects/treat-plaza.html" class="project-cta">Learn More & Take Action</a>
+              <div class="project-cta">Learn More & Take Action</div>
             </div>
-          </div>
+          </a>
 
-          <div class="project-card">
+          <a href="/projects/steiner-street.html" class="project-card">
             <img src="/images/steiner-street-wiggle.jpg" alt="Steiner Street Promenade" class="project-image">
             <div class="project-content">
               <h3 class="project-title">Steiner Street Promenade</h3>
@@ -207,9 +213,9 @@
                   <div>Impact</div>
                 </div>
               </div>
-              <a href="/projects/steiner-street.html" class="project-cta">Learn More & Take Action</a>
+              <div class="project-cta">Learn More & Take Action</div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </section>
