@@ -115,6 +115,23 @@
   margin-bottom: 0;
 }
 
+.post-text ul {
+  margin-bottom: 1.5rem;
+  padding-left: 2rem;
+}
+
+.post-text ul li {
+  margin-bottom: 0.75rem;
+  list-style-position: outside;
+}
+
+.post-text h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--color-forest);
+  font-size: 1.5rem;
+}
+
 /* Media Queries for Responsive Design */
 @media (min-width: 768px) {
   .post-content {
