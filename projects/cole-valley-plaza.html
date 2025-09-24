@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cole Valley Plaza - Green SF Now</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .project-hero {
+      background: linear-gradient(135deg, var(--color-fern) 0%, var(--color-fern-light) 100%);
+      color: var(--color-tan);
+      padding: 4rem 2rem;
+    }
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: flex-start;
+    }
+    .hero-text h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .hero-text p {
+      font-size: 1.25rem;
+      max-width: 600px;
+    }
+    .hero-cta {
+      background: var(--color-forest);
+      padding: 2rem;
+      border-radius: 0.5rem;
+      min-width: 300px;
+    }
+    .hero-cta h3 {
+      color: var(--color-tan);
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .hero-cta-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .project-details {
+      display: grid;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .project-detail-card {
+      background: var(--color-tan);
+      padding: 2rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .project-detail-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--color-forest);
+    }
+    .map-container {
+      background: #f8f9fa;
+      border: 2px dashed var(--color-fern);
+      border-radius: 0.5rem;
+      padding: 2rem;
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .cta-section {
+      background: var(--color-forest);
+      color: var(--color-tan);
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .cta-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .cta-button {
+      background: var(--color-fern);
+      color: var(--color-tan);
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 0.5rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .cta-button:hover {
+      background: var(--color-fern-light);
+      color: var(--color-forest);
+      transform: translateY(-2px);
+    }
+    .gallery-grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      margin: 2rem 0;
+    }
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 0.5rem;
+      aspect-ratio: 4/3;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+    .gallery-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(0,0,0,0.7));
+      color: white;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+    .breadcrumb {
+      background: var(--color-tan);
+      padding: 1rem 2rem;
+      border-bottom: 1px solid var(--color-fern-light);
+    }
+    .breadcrumb a {
+      color: var(--color-fern);
+    }
+    @media (min-width: 768px) {
+      .hero-content {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+      }
+      .hero-text {
+        flex: 1;
+        margin-right: 2rem;
+      }
+      .project-details {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .cta-buttons {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="bg-tan sticky">
+    <div class="nav-container">
+      <a href="/" class="logo">
+        <img src="/images/green-sf-now-sierra-club-grassroots.webp" alt="Green SF Now Logo" class="logo-img">
+      </a>
+      <div class="menu">
+        <button class="mobile-menu-button">
+          <span class="sr-only">Open main menu</span>
+          <svg class="menu-icon" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+        <div class="nav-links">
+          <a href="/projects/" class="nav-link">Projects</a>
+          <a href="/#events" class="nav-link">Events</a>
+          <a href="/blog/" class="nav-link">Blog</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="breadcrumb">
+    <a href="/">Home</a> &gt; <a href="/projects/">Projects</a> &gt; Cole Valley Plaza
+  </div>
+
+  <main>
+    <section class="project-hero">
+      <div class="section-container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Cole Valley Plaza</h1>
+            <p>Transforming a successful pop-up urban forest experiment into a permanent community green space at the intersection of Carl, Cole, and Clayton Streets</p>
+          </div>
+          <div class="hero-cta">
+            <h3>Take Action to Support This Project</h3>
+            <div class="hero-cta-buttons">
+              <button onclick="generateSupportEmail()" class="cta-button">
+                📧 Send Letter of Support
+              </button>
+              <button onclick="contactSteward()" class="cta-button">
+                🤝 Contact the Steward
+              </button>
+              <!-- <a href="https://www.sierraclub.org/sfbay/donate" target="_blank" class="cta-button">
+                💚 Donate to This Project
+              </a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-container">
+        <div class="project-details">
+          <div class="project-detail-card">
+            <h3>📍 Location</h3>
+            <p><strong>Address:</strong> Carl Street between Cole Street and Clayton Street<br>
+            <strong>Neighborhood:</strong> Cole Valley, San Francisco<br>
+            <strong>Transit:</strong> Directly adjacent to N Judah tunnel entrance/exit</p>
+          </div>
+
+          <div class="project-detail-card">
+            <h3>🌱 Project Overview</h3>
+            <p>Cole Valley Plaza represents an opportunity to transform a successful pop-up experiment into permanent green infrastructure. Through three pop-up Town Square events in 2025, this awkward wedge of asphalt where the N Judah veers off Carl Street has been transformed into a lush urban forest with over 500 plants, demonstrating the community's enthusiasm for converting underutilized road space into vibrant public gathering areas. The project aims to bring nature to a neighborhood that's heavy on gorgeous Edwardian homes but light on public open spaces.</p>
+          </div>
+
+          <div class="project-detail-card">
+            <h3>🤝 Supporters & Advocates</h3>
+            <p><strong>Lead Advocates:</strong> Green Street Fund, Green SF Now, Sierra Club SF Bay Chapter<br>
+            <strong>Key Partners:</strong> <a href="https://www.civicjoyfund.org" target="_blank">Civic Joy Fund</a>, Into the Streets, FS Studio (Alec Hawley)<br>
+            <strong>Community Support:</strong> Cole Valley Neighbors Association, local merchants from Cole Valley Nights<br>
+            <strong>Primary Contact:</strong> [To be determined - need steward designation]</p>
+          </div>
+
+          <div class="project-detail-card">
+            <h3>💰 Potential Funding Sources</h3>
+            <p><strong>City Programs:</strong> Community Challenge Grant, SFPUC Green Infrastructure Capital Programs<br>
+            <strong>Federal:</strong> EPA Environmental Justice Grants<br>
+            <strong>Private:</strong> Green Street Fund continued support, local business sponsorships</p>
+          </div>
+        </div>
+
+        <div class="project-detail-card">
+          <h3>🗺️ Site Location Map</h3>
+          <p><strong>Exact Location:</strong> Carl Street between Cole Street and Clayton Street<br>
+          <strong>Current Status:</strong> Underutilized road wedge where N Judah enters/exits tunnel<br>
+          <strong>Opportunity:</strong> Transform temporary pop-up success into permanent green plaza</p>
+
+          <iframe width="100%" height="488" frameborder="0" title="Felt Map" src="https://felt.com/embed/map/Green-SF-Now-Priority-Greening-Projects-h9CNPq7OVQKaRNJy7i2H5kC?loc=37.766032%2C-122.448737%2C18.26z&legend=0&cooperativeGestures=1&link=1&geolocation=0&zoomControls=1&scaleBar=1" referrerpolicy="strict-origin-when-cross-origin" style="border-radius: 0.5rem; margin: 1rem 0;"></iframe>
+
+          <p><em>Location where N Judah trains veer off Carl Street, creating an opportunity for permanent green infrastructure in this transit-adjacent space.</em></p>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="/blog/Cole Valley Green Street Fund Project.jpg" alt="Cole Valley Pop-up Town Square">
+            <div class="gallery-caption">
+              Cole Valley's innovative pop-up town square transformed road space into lush urban garden
+            </div>
+          </div>
+        </div>
+
+        <div class="project-detail-card">
+          <h3>🎯 Project Goals</h3>
+          <ul>
+            <li><strong>Public Open Space:</strong> Create much-needed green gathering space in dense Cole Valley</li>
+            <li><strong>Urban Forest:</strong> Install permanent trees and vegetation to improve air quality and reduce urban heat</li>
+            <li><strong>Community Building:</strong> Provide outdoor venue for neighborhood events and daily socializing</li>
+            <li><strong>Safe Streets:</strong> Create natural traffic calming and improved pedestrian safety</li>
+            <li><strong>Entertainment Zone:</strong> Continue partnership with Cole Valley Nights monthly market</li>
+            <li><strong>Stormwater Management:</strong> Incorporate permeable surfaces and bioswales where feasible</li>
+          </ul>
+        </div>
+
+        <div class="project-detail-card">
+          <h3>🎉 Pop-Up Success Story</h3>
+          <p>The temporary pop-up events have demonstrated overwhelming community support:</p>
+          <ul>
+            <li>Three successful Pop-Up Town Square events in 2025 (April, May, and June)</li>
+            <li>Each event featured 500+ plants delivered by Flora Grubb Gardens via 18-wheeler</li>
+            <li>Hundreds of residents of all ages participated in activities including Hula-Hooping, pizza, jugglers, and musical performances</li>
+            <li>Created safe play space for children with natural plant barriers</li>
+            <li>Integrated with Cole Valley Nights monthly market as part of Entertainment Zone</li>
+            <li>Next pop-up (June 12) may remain in place for 96 hours with overnight security</li>
+          </ul>
+          <p>As gardening pro Flora Grubb noted: "It's literally countercultural now to just leave the house and do something together outside. It's bizarre that that's where we've landed."</p>
+        </div>
+
+        <div class="project-detail-card">
+          <h3>📈 Current Status</h3>
+          <p><strong>Phase:</strong> Transitioning from Pop-Up to Permanent Planning<br>
+          <strong>Next Steps:</strong>
+          <br>• Complete third pop-up event (June 12, 2025)
+          <br>• Identify and designate primary project steward
+          <br>• Develop permanent design based on pop-up learnings
+          <br>• Secure community and city approval for street closure
+          <br>• Apply for funding through various grant programs<br>
+          <strong>Timeline:</strong> Design phase 2025-2026, implementation targeted for 2026-2027<br>
+          <strong>Recent Coverage:</strong> <a href="https://www.sfgate.com/local/article/tiny-san-francisco-neighborhood-safe-town-square-20283442.php" target="_blank">SFGate: "Tiny San Francisco neighborhood embraces huge idea for safer street"</a></p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <span>© 2025 Green SF Now</span>
+        <div class="footer-links">
+          <a href="/#what" class="footer-link">What</a>
+          <a href="/#why" class="footer-link">Why</a>
+          <a href="/#contact" class="footer-link">Contact</a>
+          <a href="https://github.com/kfarr/greensfnow" class="footer-link">Edit on Github</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Simple mobile menu toggle
+    document.querySelector('.mobile-menu-button').addEventListener('click', function () {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+
+    // Generate support email for Cole Valley Plaza
+    function generateSupportEmail() {
+      const recipients = [
+        'daniel.lurie@sfgov.org',
+        'Myrna.Melgar@sfgov.org',
+        'julie.kirschbaum@sfmta.com',
+        'alexandra.c.sweet@sfgov.org',
+        'carla.short@sfdpw.org',
+        'dennis.herrera@sfwater.org',
+        'sminick@sfwater.org',
+        'a.john-baptiste@sfgov.org',
+        'amar.bhardwaj.myr@sfgov.org',
+        'javier.rivera@sfdpw.org',
+        'logan.hehn@sfdpw.org'
+      ];
+
+      const ccRecipients = [
+        'CColwick@sfwater.org',
+        'Casey.Hildreth@sfmta.com',
+        'Viktoriya.a.wise@sfmta.com'
+      ];
+
+      const bccRecipients = [
+        'kieran.farr@gmail.com'
+      ];
+
+      const subject = "I support making Cole Valley Plaza permanent!";
+
+      const emailBody = `Dear Mayor Lurie, Supervisor Melgar, and City agency staff,
+
+As a resident of San Francisco, I'm writing to express my strong support for converting the successful Cole Valley Pop-Up Town Square into a permanent community green space at Carl Street between Cole and Clayton Streets.
+
+The pop-up events in 2025 have demonstrated overwhelming community enthusiasm for transforming this underutilized wedge of asphalt into a vibrant public gathering space. With over 500 plants creating an urban forest and hundreds of residents participating in community activities, these temporary installations have proven that Cole Valley desperately needs and deeply values public green space.
+
+This location, where the N Judah veers off Carl Street into the tunnel, presents a unique opportunity to create permanent green infrastructure that serves multiple community needs: providing safe play space for children, offering gathering areas for neighbors, supporting local businesses through integration with Cole Valley Nights, and bringing much-needed nature to this dense urban neighborhood.
+
+The success of the pop-ups shows this isn't just a wish—it's a tested concept with strong community backing. Cities around the world are converting road space to people space, and Cole Valley has already shown this can work beautifully here.
+
+If you're not familiar with the project or the successful pop-ups, please visit: https://greensfnow.org/projects/cole-valley-plaza.html
+
+I hope we can count on your support to make this temporary success into a permanent community asset for Cole Valley.
+
+Thank you for your time and consideration.
+
+Sincerely,`;
+
+      // Create mailto URL with all recipients
+      const mailtoUrl = `mailto:${recipients.join(',')}?cc=${ccRecipients.join(',')}&bcc=${bccRecipients.join(',')}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+
+      // Open email client
+      window.location.href = mailtoUrl;
+    }
+
+    // Contact steward email - placeholder until steward is determined
+    function contactSteward() {
+      alert('Project steward contact to be determined. For now, please contact Green Street Fund or Green SF Now through the main contact page.');
+    }
+  </script>
+</body>
+
+</html>
