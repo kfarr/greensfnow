@@ -52,7 +52,7 @@
   background: var(--color-tan);
   padding: 2rem;
   border-radius: 0.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgb(0 0 0 / 10%);
 }
 
 .project-detail-card h3 {
@@ -141,7 +141,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(transparent, rgba(0,0,0,0.7));
+  background: linear-gradient(transparent, rgb(0 0 0 / 70%));
   color: white;
   padding: 1rem;
   font-size: 0.9rem;
@@ -157,7 +157,7 @@
   color: var(--color-fern);
 }
 
-@media (min-width: 768px) {
+@media (width >= 768px) {
   .hero-content {
     flex-direction: row;
     align-items: flex-start;

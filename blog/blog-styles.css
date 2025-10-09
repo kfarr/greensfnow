@@ -22,7 +22,7 @@
 
 /* Additionally, let's enhance the target highlight */
 @keyframes highlight {
-  0% { background-color: rgba(99, 140, 62, 0.2); }
+  0% { background-color: rgb(99 140 62 / 20%); }
   100% { background-color: transparent; }
 }
 
@@ -133,7 +133,7 @@
 }
 
 /* Media Queries for Responsive Design */
-@media (min-width: 768px) {
+@media (width >= 768px) {
   .post-content {
     flex-direction: row;
     align-items: flex-start;
@@ -148,7 +148,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (width <= 767px) {
   .blog-title {
     font-size: 2.5rem;
   }

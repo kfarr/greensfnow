@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  font-family: 'Lora', serif;
+  font-family: Lora, serif;
   background-color: var(--color-tan);
   color: var(--color-forest);
   line-height: 1.5;
@@ -68,7 +68,7 @@ img {
   color: var(--color-tan);
   padding: 0.75rem 1.5rem;
   border-radius: 25px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
   position: relative;
   overflow: hidden;
   display: inline-flex;
@@ -85,7 +85,7 @@ img {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  background: linear-gradient(90deg, transparent, rgb(255 255 255 / 10%), transparent);
   animation: shimmer 3s infinite;
 }
 
@@ -119,11 +119,11 @@ img {
 .banner-link:hover {
   background-color: var(--color-fern-light);
   transform: translateY(-1px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 8px rgb(0 0 0 / 20%);
   text-decoration: none;
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .banner-content {
     flex-direction: column;
     gap: 0.5rem;
@@ -350,6 +350,7 @@ nav {
 .square-image:hover {
   transform: scale(1.03);
 }
+
 /* Why Section */
 .benefits-grid {
   display: grid;
@@ -408,14 +409,10 @@ nav {
   font-size: 1.25rem;
   font-weight: 600;
   border-radius: 0.5rem;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 10%);
 }
 
 /* Events Section */
-.bg-fern-light {
-  background-color: var(--color-fern-light);
-}
-
 .events-intro {
   text-align: center;
   margin-bottom: 2.5rem;
@@ -438,13 +435,13 @@ nav {
   background-color: var(--color-tan);
   border-radius: 0.5rem;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgb(0 0 0 / 10%);
   transition: transform 0.3s;
 }
 
 .event-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 15px rgb(0 0 0 / 10%);
 }
 
 .event-date {
@@ -498,7 +495,7 @@ nav {
 }
 
 /* Media query for larger screens */
-@media (min-width: 768px) {
+@media (width >= 768px) {
   .events-container {
     gap: 2rem;
   }
@@ -589,9 +586,6 @@ nav {
   justify-content: center;
   gap: 2rem;
   margin-top: 2rem;
-}
-
-.partner-logos {
   height: 6rem;
 }
 
@@ -622,7 +616,7 @@ nav {
 }
 
 /* Media Queries */
-@media (min-width: 768px) {
+@media (width >= 768px) {
   .mobile-menu-button {
     display: none;
   }
@@ -697,7 +691,8 @@ nav {
   0% {
     transform: rotate(0deg);
   }
-  to {
+
+  100% {
     transform: rotate(360deg);
   }
 }
