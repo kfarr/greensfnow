@@ -65,6 +65,15 @@
   text-decoration: underline;
 }
 
+.project-detail-card ul {
+  margin-left: 1.5rem;
+  margin-top: 1rem;
+}
+
+.project-detail-card li {
+  margin-bottom: 0.5rem;
+}
+
 .map-container {
   background: #f8f9fa;
   border: 2px dashed var(--color-fern);
