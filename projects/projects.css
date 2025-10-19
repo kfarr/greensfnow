@@ -166,6 +166,13 @@
   color: var(--color-fern);
 }
 
+/* Hide "Take Action" heading on mobile when CTA wraps below hero text */
+@media (width < 768px) {
+  .hero-cta h3 {
+    display: none;
+  }
+}
+
 @media (width >= 768px) {
   .hero-content {
     flex-direction: row;
