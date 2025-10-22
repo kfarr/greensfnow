@@ -157,11 +157,12 @@ nav {
 .nav-container {
   max-width: 1280px;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
   padding: 1rem;
+  position: relative;
 }
 
 .logo {
@@ -184,6 +185,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .mobile-menu-button {
@@ -203,8 +205,16 @@ nav {
 
 .nav-links {
   display: none;
-  width: 100%;
-  padding: 1rem 0;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: var(--color-tan);
+  border: 1px solid #E5E7EB;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgb(0 0 0 / 10%);
+  min-width: 200px;
+  padding: 0.5rem 0;
+  margin-top: 0.5rem;
 }
 
 .nav-links.active {
