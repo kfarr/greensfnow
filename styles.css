@@ -157,7 +157,7 @@ nav {
 .nav-container {
   max-width: 1280px;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
@@ -171,7 +171,9 @@ nav {
 
 .logo-img {
   height: 5.5rem;
+  width: auto;
   margin-right: 0.75rem;
+  object-fit: contain;
 }
 
 .logo-text {
@@ -616,6 +618,13 @@ nav {
 }
 
 /* Media Queries */
+@media (width <= 480px) {
+  .logo-img {
+    height: 4rem;
+    width: auto;
+  }
+}
+
 @media (width >= 768px) {
   .mobile-menu-button {
     display: none;
