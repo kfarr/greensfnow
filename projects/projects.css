@@ -112,6 +112,7 @@
   transition: all 0.3s;
   text-decoration: none;
   display: inline-block;
+  text-align: center;
 }
 
 .cta-button:hover {
