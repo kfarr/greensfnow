@@ -51,9 +51,9 @@
           <div class="hero-cta">
             <h3>Take Action to Support This Project</h3>
             <div class="hero-cta-buttons">
-              <a href="https://hayespromenade.org" target="_blank" class="cta-button">
-                📧 Join Our Mailing List
-              </a>
+              <button onclick="generateSupportEmail()" class="cta-button">
+                📧 Send Letter of Support
+              </button>
               <button onclick="contactSteward()" class="cta-button">
                 🤝 Contact the Steward
               </button>
@@ -84,6 +84,8 @@
             <h3>🤝 Supporters & Advocates</h3>
             <p><strong>Lead Advocates:</strong><br>
             • <a href="https://hayesvalleysf.org" target="_blank">Hayes Valley Neighborhood Association (HVNA)</a><br>
+            • <a href="https://www.explorehayesvalley.com/" target="_blank">Hayes Valley Merchants Council</a><br>
+            • <a href="https://envelopead.com/" target="_blank">Douglas Burnham / ENVELOPE</a><br>
             <strong>Primary Contact:</strong> <a href="mailto:greening@hayesvalleysf.org">greening@hayesvalleysf.org</a></p>
           </div>
 
@@ -133,13 +135,9 @@
 
         <div class="project-detail-card">
           <h3>📈 Current Status & Next Steps</h3>
-          <p><strong>Critical Milestone:</strong> SFMTA Board permit renewal (upcoming)<br>
-          <strong>Current Phase:</strong> Securing permit renewal for continued weekend activations while building support for permanent transformation<br>
-          <strong>Immediate Priority:</strong> Community advocacy at SFMTA Board meeting to ensure permit approval<br>
-          <strong>Next Steps:</strong> Meet with SFPUC and other funding sources to discuss permanent infrastructure, coordinate with Entertainment Zone legislation implementation, engage Mayor's Office economic development team<br>
           <strong>Long-term Vision:</strong> Permanent pedestrianization with green infrastructure, coordinated with potential expansion of Octavia Boulevard area improvements</p>
-
-          <p style="margin-top: 1rem;"><a href="https://hayespromenade.org/blog/save-hayes-promenade-speak-up-at-the-sfmta-board-meeting" target="_blank">Learn how to support Hayes Promenade at the SFMTA Board meeting</a></p>
+          <strong>Next Steps:</strong> Building community support to leverage inter-agency funding sources to create permanent, green infrastructure features for Hayes Promenade.<br>
+          <strong>Action to Take:</strong> Send a letter of support for the project! See above.<br>
         </div>
 
         <div class="project-detail-card">
@@ -201,7 +199,6 @@
 
     // Generate support email for Hayes Promenade
     // Commented out - now using Change.org petition instead
-    /*
     function generateSupportEmail() {
       const recipients = [
         'daniel.lurie@sfgov.org',
@@ -212,7 +209,8 @@
         'carla.short@sfdpw.org',
         'a.john-baptiste@sfgov.org',
         'amar.bhardwaj.myr@sfgov.org',
-        'DeanPrestonStaff@sfgov.org'
+        'DeanPrestonStaff@sfgov.org',
+        'gigrants@sfwater.org'
       ];
 
       const ccRecipients = [
@@ -221,28 +219,19 @@
       ];
 
       const bccRecipients = [
-        'kieran.farr@gmail.com'
+        'kieran.farr@gmail.com',
+        'greening@hayesvalleysf.org'
       ];
 
       const subject = "I support Hayes Promenade - Make it Permanent and Green!";
 
       const emailBody = `Dear Mayor Lurie, Supervisor Preston, and City agency staff,
 
-As a resident of San Francisco, I'm writing to express my strong support for Hayes Promenade and its transformation from a successful weekend activation program into a permanent pedestrian plaza and open green space in Hayes Valley.
+As a resident of San Francisco, I'm writing to express my strong support for Hayes Promenade and its transformation from a successful weekend activation program into a permanent pedestrian plaza and open green space in Hayes Valley through an inter-agency funding partnership especially including SFPUC Green Infrastructure funding.
 
 Since 2020, Hayes Promenade has demonstrated remarkable success with 27 major activations and 76 smaller activations, proving what city streets can be when we prioritize people over cars. Children play safely, neighbors and visitors gather and shop, artists and musicians perform, and local businesses thrive with increased foot traffic and outdoor dining opportunities.
 
-The benefits are clear and compelling:
-• Safe, vibrant community space in the heart of Hayes Valley
-• Strong support from local merchants who benefit from consistent pedestrian activity
-• Cultural programming that strengthens neighborhood bonds
-• A proven model over multiple years of successful weekend activations
-• Integration with recently passed Entertainment Zone legislation
-• Opportunity for green infrastructure and stormwater management on approximately 1.5 acres
-
-The immediate priority is ensuring permit renewal at the upcoming SFMTA Board meeting to continue the weekend activations. Beyond that, I strongly encourage the city to work with Hayes Valley Neighborhood Association, the Merchants Council, and project advocates to transform this successful temporary program into a permanent pedestrian plaza.
-
-Hayes Promenade represents the future of San Francisco's streets: people-centered, environmentally sustainable, economically vibrant, and community-building. Please support both the permit renewal and the long-term vision for permanent pedestrianization.
+This is a unique opportunity to leverage City funding for multiple purposes at the same time -- nearly 1 contiguous acre of hardscape could be removed to support stormwater retention, aquifer restoration, clean water, biodiversity and community access to nature and green, open space.
 
 For more information, please visit: https://greensfnow.org/projects/hayes-promenade.html and https://hayespromenade.org
 
@@ -256,7 +245,6 @@ Sincerely,`;
       // Open email client
       window.location.href = mailtoUrl;
     }
-    */
 
     // Contact steward email
     function contactSteward() {
