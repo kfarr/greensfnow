@@ -140,6 +140,18 @@
   font-size: 1.5rem;
 }
 
+/* Multi-image column for posts with stacked photos */
+.post-image-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.post-image-column .post-image-container {
+  width: 100%;
+}
+
 /* Media Queries for Responsive Design */
 @media (width >= 768px) {
   .post-content {
@@ -148,6 +160,10 @@
   }
 
   .post-image-container {
+    width: 40%;
+  }
+
+  .post-image-column {
     width: 40%;
   }
 
