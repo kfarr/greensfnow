@@ -10,6 +10,59 @@
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
   <link rel="stylesheet" href="projects.css">
+  <style>
+    /* Cycling photo hero — Illinois Street */
+    .project-hero {
+      position: relative;
+      overflow: hidden;
+      background: none;
+      min-height: 420px;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      animation: heroFade 18s infinite;
+    }
+
+    .hero-bg-1 {
+      background-image: url('images/illinois-greening-1.jpg');
+      animation-delay: 0s;
+    }
+
+    .hero-bg-2 {
+      background-image: url('images/illinois-greening-2.jpg');
+      animation-delay: 6s;
+    }
+
+    .hero-bg-3 {
+      background-image: url('images/illinois-greening-3.jpg');
+      animation-delay: 12s;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+      z-index: 1;
+    }
+
+    .project-hero .section-container {
+      position: relative;
+      z-index: 2;
+    }
+
+    @keyframes heroFade {
+      0%   { opacity: 1; }
+      28%  { opacity: 1; }
+      33%  { opacity: 0; }
+      95%  { opacity: 0; }
+      100% { opacity: 1; }
+    }
+  </style>
 </head>
 
 <body>
@@ -42,6 +95,10 @@
 
   <main>
     <section class="project-hero">
+      <div class="hero-bg hero-bg-1"></div>
+      <div class="hero-bg hero-bg-2"></div>
+      <div class="hero-bg hero-bg-3"></div>
+      <div class="hero-overlay"></div>
       <div class="section-container">
         <div class="hero-content">
           <div class="hero-text">
@@ -143,6 +200,24 @@
         </div>
 
         <div class="project-detail-card">
+          <h3>📸 Project Gallery</h3>
+          <div class="gallery-grid">
+            <a href="images/illinois-greening-1.jpg" target="_blank" class="gallery-item">
+              <img src="images/illinois-greening-1.jpg" alt="Illinois Street corridor">
+              <div class="gallery-caption">Illinois Street corridor today</div>
+            </a>
+            <a href="images/illinois-greening-2.jpg" target="_blank" class="gallery-item">
+              <img src="images/illinois-greening-2.jpg" alt="Illinois Street Bay Trail segment">
+              <div class="gallery-caption">Bay Trail segment along Illinois Street</div>
+            </a>
+            <a href="images/illinois-greening-3.jpg" target="_blank" class="gallery-item">
+              <img src="images/illinois-greening-3.jpg" alt="PG&E parcel between 23rd and 24th">
+              <div class="gallery-caption">PG&E parcel — future pocket park site</div>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-detail-card">
           <h3>📈 Current Status</h3>
           <p><strong>Phase:</strong> Community Visioning and Coalition Building<br>
           <strong>Next Steps:</strong> Document existing corridor conditions, build supporter coalition (Dogpatch groups, AIC tenants, Power Station developers, YMCA), coordinate with Safer Illinois Street campaign, identify initial funding sources for both corridor and pocket park<br>
@@ -190,7 +265,7 @@
         'logan.hehn@sfdpw.org',
         'Madison.R.Tam@sfgov.org',
         'Monica.Giacomucci@sfgov.org',
-        'DorseyStaff@sfgov.org',
+        'waltonstaff@sfgov.org',
         'gigrants@sfwater.org'
       ];
 
@@ -200,7 +275,7 @@
 
       const subject = "I support the Illinois Street Bay Trail Greening project in Dogpatch!";
 
-      const emailBody = `Dear Mayor Lurie, Supervisor Dorsey, and City agency staff,
+      const emailBody = `Dear Mayor Lurie, Supervisor Walton, and City agency staff,
 
 As a resident of San Francisco, I'm writing to express my strong support for the Illinois Street Bay Trail Greening project, which would transform the Illinois Street corridor from Mariposa to Cargo Way into a green, safe, and welcoming Bay Trail connection for the Dogpatch and Potrero Hill neighborhoods.
 
