@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minnesota Slow Street Greening - Green SF Now</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="projects.css">
+  <style>
+    /* Cycling photo hero — Minnesota Slow Street */
+    .project-hero {
+      position: relative;
+      overflow: hidden;
+      background: none;
+      min-height: 420px;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      animation: heroFade 18s infinite;
+    }
+
+    .hero-bg-1 {
+      background-image: url('images/minneslowta-1.webp');
+      animation-delay: 0s;
+    }
+
+    .hero-bg-2 {
+      background-image: url('images/minneslowta-2.webp');
+      animation-delay: 6s;
+    }
+
+    .hero-bg-3 {
+      background-image: url('images/minneslowta-3.webp');
+      animation-delay: 12s;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+      z-index: 1;
+    }
+
+    .project-hero .section-container {
+      position: relative;
+      z-index: 2;
+    }
+
+    @keyframes heroFade {
+      0%   { opacity: 1; }
+      28%  { opacity: 1; }
+      33%  { opacity: 0; }
+      95%  { opacity: 0; }
+      100% { opacity: 1; }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="bg-tan sticky">
+    <div class="nav-container">
+      <a href="/" class="logo">
+        <img src="/images/green-sf-now-sierra-club-grassroots.webp" alt="Green SF Now Logo" class="logo-img">
+      </a>
+      <div class="menu">
+        <button class="mobile-menu-button">
+          <span class="sr-only">Open main menu</span>
+          <svg class="menu-icon" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+        <div class="nav-links">
+          <a href="/projects/" class="nav-link">Projects</a>
+          <a href="/#events" class="nav-link">Events</a>
+          <a href="/blog/" class="nav-link">Blog</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="breadcrumb">
+    <a href="/">Home</a> &gt; <a href="/projects/">Projects</a> &gt; Minnesota Slow Street Greening
+  </div>
+
+  <main>
+    <section class="project-hero">
+      <div class="hero-bg hero-bg-1"></div>
+      <div class="hero-bg hero-bg-2"></div>
+      <div class="hero-bg hero-bg-3"></div>
+      <div class="hero-overlay"></div>
+      <div class="section-container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Minnesota Slow Street Greening</h1>
+            <p>Turning Dogpatch's beloved MinneSLOWta corridor &mdash; a permanent Slow Street running from Mariposa to 22nd &mdash; into a lush, tree-lined community greenway with rain gardens, street trees, and community-art corners, stewarded in partnership with the Dogpatch &amp; Northwest Potrero Hill Green Benefit District.</p>
+          </div>
+          <div class="hero-cta">
+            <h3>Take Action to Support This Project</h3>
+            <div class="hero-cta-buttons">
+              <button onclick="generateSupportEmail()" class="cta-button">
+                📧 Send Letter of Support
+              </button>
+              <button onclick="contactSteward()" class="cta-button">
+                🤝 Contact the Steward
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background: var(--color-fern);">
+      <div class="section-container">
+        <div class="project-details">
+          <div class="project-detail-card">
+            <h3>📍 Location</h3>
+            <p><strong>Corridor:</strong> Minnesota Street from Mariposa Street to 22nd Street<br>
+            <strong>Neighborhood:</strong> Dogpatch / Potrero Hill, San Francisco<br>
+            <strong>District:</strong> Supervisor Shamann Walton (District 10)<br>
+            <strong>Key Connections:</strong> Esprit Park, Progress Park, Warm Water Cove, Museum of Craft and Design, Minnesota Street Project art gallery, UCSF Mission Bay, protected bike lanes on 4th and 16th Streets, Central Waterfront businesses</p>
+          </div>
+
+          <div class="project-detail-card">
+            <h3>🌱 Project Overview</h3>
+            <p>Minnesota Slow Street &mdash; affectionately known as <a href="https://www.minneslowta.com/" target="_blank">MinneSLOWta</a> &mdash; runs through the heart of Dogpatch, safely connecting parks, museums, businesses, and residents, and providing a vital low-stress alternative to 3rd Street for people walking, biking, scooting, and rolling. Originally implemented as a COVID-19 Response Slow Street in 2020, the SFMTA Board approved Minnesota as a permanent Slow Street on December 6, 2022, and the corridor's long-term design was approved at a January 5, 2024 public hearing.</p>
+            <p style="margin-top: 1rem;">The 2024 design adds a northbound diverter at 19th Street, a painted safety zone and median island at 18th, painted safety zones at 18th and 19th that can host community art, a new traffic calming island between 20th and 22nd, and Slow Streets pavement markings and wayfinding throughout. These painted zones and islands &mdash; plus the corridor's generous right-of-way and existing community stewardship &mdash; make Minnesota a ready canvas for the next step: permanent, beautiful, ecologically productive greening.</p>
+            <p style="margin-top: 1rem;">Minnesota Slow Street Greening envisions a gradual transformation from painted interventions and plastic posts into a living greenway: street trees, rain gardens, native plantings in the traffic calming islands, community-designed street murals in the painted safety zones, and permanent planters at daylighted corners &mdash; all maintained in partnership with the Dogpatch &amp; Northwest Potrero Hill Green Benefit District.</p>
+          </div>
+
+          <div class="project-detail-card">
+            <h3>🤝 Stewards &amp; Partners</h3>
+            <p><strong>Community Steward:</strong> <a href="https://www.minneslowta.com/" target="_blank">MinneSLOWta</a> (D10 Livable Streets)<br>
+            <strong>Maintenance Partner:</strong> <a href="https://greenbenefit.org/" target="_blank">Dogpatch &amp; Northwest Potrero Hill Green Benefit District (GBD)</a> &mdash; the neighborhood CBD-style district that already maintains parks, medians, and green infrastructure across Dogpatch and NW Potrero Hill<br>
+            <strong>Community Partners:</strong> Dogpatch Neighborhood Association, Potrero Boosters, Museum of Craft and Design, Minnesota Street Project, neighborhood businesses along the corridor<br>
+            <strong>Government Partners:</strong> SFMTA (Slow Streets program), SF Public Works, SFPUC (Green Infrastructure), Supervisor Walton's office</p>
+          </div>
+
+          <div class="project-detail-card">
+            <h3>💰 Potential Funding Sources</h3>
+            <p><strong>Near-Term:</strong> Civic Joy Fund activation grants, SF Beautiful grants, Community Challenge Grant for planters and plantings<br>
+            <strong>City Programs:</strong> SFMTA Slow Streets bulb-out funding (as piloted on Sanchez), SFPUC Green Infrastructure capital programs (as seen at Cayuga/Alemany), DPW street tree planting and tree-well extensions<br>
+            <strong>Maintenance:</strong> Dogpatch &amp; NW Potrero Hill Green Benefit District assessment funds for ongoing plant care, watering, and stewardship &mdash; a structural advantage few SF greening projects have<br>
+            <strong>Community:</strong> Neighborhood fundraising, local business sponsorships, volunteer plant stewardship through MinneSLOWta</p>
+          </div>
+        </div>
+
+        <div class="project-detail-card">
+          <h3>🗺️ Site Location Map</h3>
+          <p><strong>Corridor:</strong> Minnesota Street, Mariposa to 22nd &mdash; the heart of Dogpatch<br>
+          <strong>Opportunity:</strong> A permanent Slow Street with approved painted safety zones, median islands, and a diverter ready to be transformed into permanent green infrastructure</p>
+
+          <iframe width="100%" height="400" frameborder="0" title="Felt Map" src="https://felt.com/embed/map/Green-SF-Now-Priority-Greening-Projects-h9CNPq7OVQKaRNJy7i2H5kC?loc=37.761,-122.390,15.5z&legend=0&cooperativeGestures=1&link=1&geolocation=1&zoomControls=1&scaleBar=1" referrerpolicy="strict-origin-when-cross-origin" style="border-radius: 0.5rem; margin: 1rem 0;"></iframe>
+
+          <p><em>Interactive map showing the Minnesota Slow Street corridor through Dogpatch.</em></p>
+        </div>
+
+        <div class="project-detail-card">
+          <h3>🏗️ Planned Improvements</h3>
+          <ul>
+            <li><strong>Street Trees:</strong> New street trees along the Minnesota corridor to provide canopy, shade, and habitat &mdash; filling gaps where the existing streetscape is bare</li>
+            <li><strong>Rain Gardens &amp; Sidewalk Gardens:</strong> Capture stormwater from the corridor and surrounding Dogpatch blocks before it reaches the combined sewer, reducing runoff to Islais Creek and the Bay</li>
+            <li><strong>Greened Painted Safety Zones:</strong> Transform the new painted safety zones at 18th and 19th Streets into living corners &mdash; native plantings, permanent planters, and community-designed street murals in the remaining painted areas</li>
+            <li><strong>Landscaped Traffic Calming Island:</strong> Plant the approved traffic calming island between 20th and 22nd with drought-tolerant native plantings instead of bare concrete or paint</li>
+            <li><strong>Greened Diverter at 19th:</strong> Soften the northbound diverter island at Minnesota &amp; 19th with plantings, turning a traffic control feature into a neighborhood landmark</li>
+            <li><strong>Permanent Planters at Daylighted Corners:</strong> Replace plastic soft-hit posts at daylighting zones with durable planters, hardening safety improvements while beautifying the street</li>
+            <li><strong>Community Art &amp; Wayfinding:</strong> Extend the beloved Dogpatch Planet Walk and other community art installations along the corridor, paired with Slow Streets wayfinding</li>
+            <li><strong>GBD-Stewarded Maintenance:</strong> All new plantings maintained by the Dogpatch &amp; NW Potrero Hill Green Benefit District, unlocking permanent greening that many SF projects struggle to sustain</li>
+          </ul>
+        </div>
+
+        <div class="project-detail-card">
+          <h3>🎯 Project Goals</h3>
+          <h4 style="margin-top: 1rem;">Short-Term: Activate &amp; Harden the Approved Design</h4>
+          <ul>
+            <li><strong>Planter Pilot:</strong> Place movable and permanent planters at the new painted safety zones and daylighted corners on 18th and 19th as SFMTA implements the 2024 design</li>
+            <li><strong>Community Art Corners:</strong> Partner with MinneSLOWta and neighborhood artists to paint street murals in the painted safety zones &mdash; continuing the tradition of the Annual Spooky Slow Street Stroll and Dogpatch Planet Walk</li>
+            <li><strong>Tree Planting Events:</strong> Work with Friends of the Urban Forest and DPW BUF to plant new street trees along the corridor with neighborhood volunteers</li>
+          </ul>
+          <h4 style="margin-top: 1rem;">Medium-Term: Pursue Funding &amp; Permits</h4>
+          <ul>
+            <li>Pursue SFMTA Slow Streets bulb-out funding, SFPUC Green Infrastructure programming, and Community Corners plan installations for permanent concrete &amp; plantings</li>
+            <li>Coordinate with the Dogpatch &amp; NW Potrero Hill GBD to fold new greening into their ongoing maintenance scope</li>
+          </ul>
+          <h4 style="margin-top: 1rem;">Long-Term: A Permanent Dogpatch Greenway</h4>
+          <ul>
+            <li><strong>Bulb-Outs with Plantings:</strong> Permanent concrete bulb-outs planted with trees and shrubs at key intersections along Minnesota</li>
+            <li><strong>Connected Rain Garden Network:</strong> A corridor-length network of sidewalk rain gardens capturing Dogpatch stormwater before it reaches the Bay</li>
+            <li><strong>Model Slow Street Greenway:</strong> Minnesota becomes a citywide model for how neighborhoods with an active Green Benefit District can fully transform a Slow Street into a permanent greenway</li>
+          </ul>
+        </div>
+
+        <div class="project-detail-card">
+          <h3>📈 Current Status</h3>
+          <p><strong>Slow Street Status:</strong> Permanent (SFMTA Board approved December 6, 2022)<br>
+          <strong>Design Phase:</strong> Full design package approved at January 5, 2024 public hearing &mdash; includes diverter at 19th, painted safety zones at 18th and 19th, median island at 18th, traffic calming island between 20th and 22nd, and Slow Streets wayfinding<br>
+          <strong>Implementation:</strong> Pending SFMTA installation<br>
+          <strong>Greening Vision:</strong> Building community support for permanent greening of the approved painted safety zones, islands, and corridor &mdash; in partnership with the Dogpatch &amp; NW Potrero Hill Green Benefit District</p>
+        </div>
+
+        <div class="project-detail-card">
+          <h3>📸 Project Gallery</h3>
+          <div class="gallery-grid">
+            <a href="images/minneslowta-1.webp" target="_blank" class="gallery-item">
+              <img src="images/minneslowta-1.webp" alt="Minnesota Slow Street corridor">
+              <div class="gallery-caption">MinneSLOWta corridor today</div>
+            </a>
+            <a href="images/minneslowta-2.webp" target="_blank" class="gallery-item">
+              <img src="images/minneslowta-2.webp" alt="Neighbors enjoying Minnesota Slow Street">
+              <div class="gallery-caption">Neighbors enjoying the Slow Street</div>
+            </a>
+            <a href="images/minneslowta-3.webp" target="_blank" class="gallery-item">
+              <img src="images/minneslowta-3.webp" alt="Minnesota Slow Street through Dogpatch">
+              <div class="gallery-caption">Minnesota Slow Street through Dogpatch</div>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-detail-card">
+          <h3>📰 Related Links</h3>
+          <ul>
+            <li><a href="https://www.minneslowta.com/" target="_blank">MinneSLOWta &mdash; Community Support Site</a></li>
+            <li><a href="https://www.sfmta.com/projects/minnesota-slow-street" target="_blank">SFMTA: Minnesota Slow Street Project</a></li>
+            <li><a href="https://greenbenefit.org/" target="_blank">Dogpatch &amp; NW Potrero Hill Green Benefit District</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <span>© 2026 Green SF Now</span>
+        <div class="footer-links">
+          <a href="/#what" class="footer-link">What</a>
+          <a href="/#why" class="footer-link">Why</a>
+          <a href="/#contact" class="footer-link">Contact</a>
+          <a href="https://github.com/kfarr/greensfnow" class="footer-link">Edit on Github</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Simple mobile menu toggle
+    document.querySelector('.mobile-menu-button').addEventListener('click', function () {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+
+    // Generate support email for Minnesota Slow Street Greening
+    function generateSupportEmail() {
+      const recipients = [
+        'daniel.lurie@sfgov.org',
+        'waltonstaff@sfgov.org',
+        'carla.short@sfdpw.org',
+        'dennis.herrera@sfwater.org',
+        'sminick@sfwater.org',
+        'julie.kirschbaum@sfmta.com',
+        'alexandra.c.sweet@sfgov.org',
+        'a.john-baptiste@sfgov.org',
+        'amar.bhardwaj.myr@sfgov.org',
+        'javier.rivera@sfdpw.org',
+        'logan.hehn@sfdpw.org',
+        'Madison.R.Tam@sfgov.org',
+        'Monica.Giacomucci@sfgov.org',
+        'gigrants@sfwater.org',
+        'SlowStreets@SFMTA.com'
+      ];
+
+      const ccRecipients = [
+        'Shannon.Hake@sfmta.com',
+        'CColwick@sfwater.org',
+        'Viktoriya.a.wise@sfmta.com'
+      ];
+
+      const bccRecipients = [
+        'kieran.farr@gmail.com',
+        'd10livablestreets@gmail.com'
+      ];
+
+      const subject = "I support greening Minnesota Slow Street in Dogpatch!";
+
+      const emailBody = `Dear Mayor Lurie, Supervisor Walton, and City agency staff,
+
+As a resident and/or supporter of San Francisco, I'm writing to express my strong support for the Minnesota Slow Street Greening project — a community-led initiative to transform Dogpatch's beloved MinneSLOWta corridor from a paint-and-post Slow Street into a permanent green neighborhood greenway with street trees, rain gardens, community-art corners, and landscaped traffic calming islands.
+
+Minnesota Slow Street was approved as a permanent Slow Street by the SFMTA Board on December 6, 2022, and the full design package was approved at the January 5, 2024 public hearing. That approved design already includes painted safety zones at 18th and 19th, a median island, a northbound diverter at 19th, and a traffic calming island between 20th and 22nd. These approved features are ready-made canvases for permanent greening.
+
+The vision includes:
+- New street trees along the Minnesota corridor to provide canopy and habitat
+- Sidewalk rain gardens to capture Dogpatch stormwater before it reaches the Bay
+- Native plantings in the approved traffic calming island between 20th and 22nd
+- A greened, landscaped diverter at Minnesota & 19th
+- Permanent planters at daylighted corners, replacing plastic posts with living infrastructure
+- Community-designed street murals and art in the painted safety zones, continuing the tradition of the Annual Spooky Slow Street Stroll and the Dogpatch Planet Walk
+
+Crucially, this project has a built-in maintenance partner that few SF greening projects can offer: the Dogpatch & Northwest Potrero Hill Green Benefit District, which already funds and stewards parks, medians, and green infrastructure across the neighborhood. With the MinneSLOWta community group leading advocacy and the GBD committing to long-term care, Minnesota Slow Street can become San Francisco's first fully greened Slow Street — and a citywide model for how neighborhoods can transform tactical Slow Streets into permanent greenways.
+
+We ask that you support this project through SFMTA Slow Streets bulb-out funding, SFPUC Green Infrastructure programming, and coordinated implementation with the Dogpatch & NW Potrero Hill Green Benefit District.
+
+For more information, please visit: https://greensfnow.org/projects/minnesota-slow-street-greening.html
+
+Thank you for your time and consideration.
+
+Sincerely,`;
+
+      const mailtoUrl = `mailto:${recipients.join(',')}?cc=${ccRecipients.join(',')}&bcc=${bccRecipients.join(',')}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+      window.location.href = mailtoUrl;
+    }
+
+    // Contact steward
+    function contactSteward() {
+      window.location.href = 'mailto:d10livablestreets@gmail.com?subject=Minnesota%20Slow%20Street%20Greening%20Inquiry';
+    }
+  </script>
+</body>
+
+</html>
