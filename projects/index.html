@@ -599,7 +599,7 @@
         });
       }
 
-      function setView(view) {
+      function setView(view, updateHash) {
         const isMap = view === 'map';
         listView.hidden = isMap;
         mapView.hidden = !isMap;
@@ -608,14 +608,26 @@
         mapBtn.classList.toggle('active', isMap);
         listBtn.setAttribute('aria-selected', String(!isMap));
         mapBtn.setAttribute('aria-selected', String(isMap));
+        if (updateHash) {
+          const newHash = isMap ? '#map' : '#list';
+          if (location.hash !== newHash) {
+            history.replaceState(null, '', location.pathname + location.search + newHash);
+          }
+        }
+      }
+
+      function viewFromHash() {
+        return location.hash === '#map' ? 'map' : 'list';
       }
 
       sortSelect.addEventListener('change', e => sortCards(e.target.value));
-      listBtn.addEventListener('click', () => setView('list'));
-      mapBtn.addEventListener('click', () => setView('map'));
+      listBtn.addEventListener('click', () => setView('list', true));
+      mapBtn.addEventListener('click', () => setView('map', true));
+      window.addEventListener('hashchange', () => setView(viewFromHash(), false));
 
       sortCards('newest');
       buildMapLinks();
+      setView(viewFromHash(), false);
     })();
   </script>
 </body>
