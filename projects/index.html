@@ -13,12 +13,17 @@
     .projects-hero {
       background: linear-gradient(135deg, var(--color-fern) 0%, var(--color-fern-light) 100%);
       color: var(--color-tan);
-      padding: 4rem 2rem;
+      padding: 1.5rem 2rem;
       text-align: center;
     }
     .projects-hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
+      font-size: 1.75rem;
+      margin-bottom: 0.35rem;
+    }
+    .projects-hero p {
+      font-size: 0.95rem;
+      margin: 0 auto;
+      max-width: 60ch;
     }
     .projects-grid {
       display: grid;
@@ -122,6 +127,104 @@
       font-size: 0.8rem;
       font-weight: 600;
     }
+    .projects-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+    }
+    .view-toggle {
+      display: inline-flex;
+      border: 1px solid var(--color-fern);
+      border-radius: 0.25rem;
+      overflow: hidden;
+    }
+    .view-toggle button {
+      background: var(--color-tan);
+      color: var(--color-fern);
+      border: none;
+      padding: 0.5rem 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    .view-toggle button.active {
+      background: var(--color-fern);
+      color: var(--color-tan);
+    }
+    .sort-control {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.95rem;
+    }
+    .sort-control select {
+      padding: 0.4rem 0.6rem;
+      border: 1px solid var(--color-fern);
+      border-radius: 0.25rem;
+      background: var(--color-tan);
+      color: var(--color-forest);
+      font-family: inherit;
+      font-size: 0.95rem;
+      cursor: pointer;
+    }
+    .map-view {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
+      margin-top: 1rem;
+    }
+    @media (max-width: 768px) {
+      .map-view {
+        grid-template-columns: 1fr;
+      }
+    }
+    .map-view iframe {
+      width: 100%;
+      height: 640px;
+      border: 0;
+      border-radius: 0.5rem;
+    }
+    .map-project-list {
+      max-height: 640px;
+      overflow-y: auto;
+      border: 1px solid var(--color-fern-light);
+      border-radius: 0.5rem;
+      padding: 0.5rem;
+      background: var(--color-tan);
+    }
+    .map-project-list h3 {
+      margin: 0.5rem 0.75rem;
+      font-size: 1.1rem;
+      color: var(--color-forest);
+    }
+    .map-project-list a {
+      display: block;
+      padding: 0.6rem 0.75rem;
+      border-radius: 0.25rem;
+      color: var(--color-forest);
+      text-decoration: none;
+      border-bottom: 1px solid var(--color-fern-light);
+    }
+    .map-project-list a:last-child {
+      border-bottom: none;
+    }
+    .map-project-list a:hover {
+      background: var(--color-fern-light);
+      text-decoration: none;
+    }
+    .map-project-list .mp-title {
+      font-weight: 600;
+      display: block;
+    }
+    .map-project-list .mp-location {
+      display: block;
+      font-size: 0.85rem;
+      color: var(--color-fern);
+      margin-top: 0.15rem;
+    }
   </style>
 </head>
 
@@ -163,9 +266,24 @@
 
     <section class="section">
       <div class="section-container">
+        <div class="projects-controls">
+          <div class="view-toggle" role="tablist" aria-label="Project view">
+            <button type="button" id="view-list-btn" class="active" role="tab" aria-selected="true">List</button>
+            <button type="button" id="view-map-btn" role="tab" aria-selected="false">Map</button>
+          </div>
+          <div class="sort-control" id="sort-control">
+            <label for="sort-select">Sort:</label>
+            <select id="sort-select">
+              <option value="newest" selected>Newest first</option>
+              <option value="oldest">Oldest first</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="list-view">
         <div class="projects-grid">
 
-          <a href="/projects/cortland-in-bloom.html" class="project-card">
+          <a href="/projects/cortland-in-bloom.html" class="project-card" data-posted="2025-10-09" data-lat="37.7399" data-lng="-122.4144">
             <img src="/projects/images/cortland.jpeg" alt="Cortland in Bloom" class="project-image">
             <div class="project-content">
               <h3 class="project-title">Cortland in Bloom</h3>
@@ -177,7 +295,7 @@
             </div>
           </a>
 
-          <a href="/projects/green-cultural-zone.html" class="project-card">
+          <a href="/projects/green-cultural-zone.html" class="project-card" data-posted="2025-10-08" data-lat="37.766866" data-lng="-122.420015">
             <img src="/projects/images/gcz-julian1.jpg" alt="Green Cultural Zone" class="project-image">
             <div class="project-content">
               <h3 class="project-title">Green Cultural Zone</h3>
@@ -189,7 +307,7 @@
             </div>
           </a>
 
-          <a href="/projects/cole-valley-town-square.html" class="project-card">
+          <a href="/projects/cole-valley-town-square.html" class="project-card" data-posted="2025-10-09" data-lat="37.766032" data-lng="-122.448737">
             <img src="/projects/images/cole-valley-town-square-wide.jpeg" alt="Cole Valley Town Square" class="project-image">
             <div class="project-content">
               <h3 class="project-title">Cole Valley Town Square</h3>
@@ -211,7 +329,7 @@
             </div>
           </a>
 
-          <a href="/projects/wiggle-plaza.html" class="project-card">
+          <a href="/projects/wiggle-plaza.html" class="project-card" data-posted="2025-07-23" data-lat="37.770345" data-lng="-122.431999">
             <img src="/projects/images/wiggle-fest-kid-bike-training-program.jpg" alt="Wiggle Plaza" class="project-image">
             <div class="project-content">
               <h3 class="project-title">Wiggle Plaza</h3>
@@ -237,7 +355,7 @@
             </div>
           </a>
 
-          <a href="/projects/treat-plaza.html" class="project-card">
+          <a href="/projects/treat-plaza.html" class="project-card" data-posted="2025-06-20" data-lat="37.766194" data-lng="-122.412832">
             <img src="/blog/treat-plaza-may-17-2025-final.webp" alt="Treat Plaza North" class="project-image">
             <div class="project-content">
               <h3 class="project-title">Treat Plaza North</h3>
@@ -263,7 +381,7 @@
             </div>
           </a>
 
-          <a href="/projects/mistral-street-greening.html" class="project-card">
+          <a href="/projects/mistral-street-greening.html" class="project-card" data-posted="2025-10-10" data-lat="37.7568" data-lng="-122.4115">
             <img src="/projects/images/mistral-current-aerial.jpg" alt="Mistral Street Greening" class="project-image">
             <div class="project-content">
               <h3 class="project-title">Mistral Street Greening</h3>
@@ -275,7 +393,7 @@
             </div>
           </a>
 
-          <a href="/projects/hayes-promenade.html" class="project-card">
+          <a href="/projects/hayes-promenade.html" class="project-card" data-posted="2025-11-08" data-lat="37.776662" data-lng="-122.424133">
             <img src="/projects/images/hayes-promenade-2023.12.01.holiday.stroll_small.jpg" alt="Hayes Promenade" class="project-image">
             <div class="project-content">
               <h3 class="project-title">Hayes Promenade</h3>
@@ -287,7 +405,7 @@
             </div>
           </a>
 
-          <a href="/projects/carolina-triangle.html" class="project-card">
+          <a href="/projects/carolina-triangle.html" class="project-card" data-posted="2025-10-30" data-lat="37.7683585" data-lng="-122.4009268">
             <img src="/projects/images/carolina-triangle-current-1.jpeg" alt="Carolina Triangle" class="project-image">
             <div class="project-content">
               <h3 class="project-title">Carolina Triangle</h3>
@@ -299,7 +417,7 @@
             </div>
           </a>
 
-          <a href="/projects/wolfe-plaza.html" class="project-card">
+          <a href="/projects/wolfe-plaza.html" class="project-card" data-posted="2025-11-11" data-lat="37.7666527" data-lng="-122.3995462">
             <img src="/projects/images/wolfe-plaza-2-2010.jpg" alt="Wolfe Plaza" class="project-image">
             <div class="project-content">
               <h3 class="project-title">Wolfe Plaza</h3>
@@ -311,7 +429,7 @@
             </div>
           </a>
 
-          <a href="/projects/cayuga-alemany-greening.html" class="project-card">
+          <a href="/projects/cayuga-alemany-greening.html" class="project-card" data-posted="2026-02-12" data-lat="37.7242" data-lng="-122.44">
             <img src="/projects/images/cayuga-alemany-greening-area-map.webp" alt="Cayuga / Alemany Greening" class="project-image">
             <div class="project-content">
               <h3 class="project-title">Cayuga / Alemany Greening</h3>
@@ -323,7 +441,7 @@
             </div>
           </a>
 
-          <a href="/projects/bernal-cut-arlington-greening.html" class="project-card">
+          <a href="/projects/bernal-cut-arlington-greening.html" class="project-card" data-posted="2026-04-04" data-lat="37.736921" data-lng="-122.428883">
             <img src="/projects/images/bernal-arlington-greening1.jpg" alt="Bernal Cut / Arlington Greening" class="project-image">
             <div class="project-content">
               <h3 class="project-title">Bernal Cut / Arlington Greening</h3>
@@ -335,7 +453,19 @@
             </div>
           </a>
 
-          <a href="/projects/sanchez-greenway.html" class="project-card">
+          <a href="/projects/minnesota-slow-street-greening.html" class="project-card" data-posted="2026-04-14" data-lat="37.761" data-lng="-122.390">
+            <img src="/projects/images/minneslowta-1.webp" alt="Minnesota Slow Street Greening" class="project-image">
+            <div class="project-content">
+              <h3 class="project-title">Minnesota Slow Street Greening</h3>
+              <p class="project-location">📍 Dogpatch • Minnesota Street from Mariposa to 22nd</p>
+              <p class="project-description">
+                Transforming Dogpatch's beloved MinneSLOWta corridor into a lush community greenway with street trees, rain gardens, and community-art corners — maintained in partnership with the Dogpatch & NW Potrero Hill Green Benefit District.
+              </p>
+              <div class="project-cta">Show Project Page →</div>
+            </div>
+          </a>
+
+          <a href="/projects/sanchez-greenway.html" class="project-card" data-posted="2026-03-10" data-lat="37.7485" data-lng="-122.4313">
             <img src="/projects/images/sanchez-green1.jpg" alt="Sanchez Greenway" class="project-image">
             <div class="project-content">
               <h3 class="project-title">Sanchez Greenway</h3>
@@ -347,7 +477,7 @@
             </div>
           </a>
 
-          <a href="/projects/sfo-bay-trail-gap.html" class="project-card">
+          <a href="/projects/sfo-bay-trail-gap.html" class="project-card" data-posted="2025-12-26" data-lat="37.61994" data-lng="-122.39763">
             <img src="/projects/images/sfo-bay-trail-gap-alignments-map.webp" alt="SFO Bay Trail Gap" class="project-image">
             <div class="project-content">
               <h3 class="project-title">SFO Bay Trail Gap</h3>
@@ -359,7 +489,7 @@
             </div>
           </a>
 
-          <a href="/projects/illinois-power-plant-park.html" class="project-card">
+          <a href="/projects/illinois-power-plant-park.html" class="project-card" data-posted="2026-04-06" data-lat="37.7565" data-lng="-122.3885">
             <img src="/projects/images/illinois-greening-1.jpg" alt="Illinois Street Bay Trail Greening" class="project-image">
             <div class="project-content">
               <h3 class="project-title">Illinois Street Bay Trail Greening</h3>
@@ -371,7 +501,7 @@
             </div>
           </a>
 
-          <a href="/projects/sansome-plaza.html" class="project-card">
+          <a href="/projects/sansome-plaza.html" class="project-card" data-posted="2026-02-06" data-lat="37.79065" data-lng="-122.40095">
             <img src="/projects/images/sansome-2.jpeg" alt="Sansome Plaza" class="project-image">
             <div class="project-content">
               <h3 class="project-title">Sansome Plaza</h3>
@@ -382,6 +512,17 @@
               <div class="project-cta">Show Project Page →</div>
             </div>
           </a>
+        </div>
+        </div>
+
+        <div id="map-view" hidden>
+          <div class="map-view">
+            <iframe title="Green SF Now Priority Greening Projects Map" src="https://felt.com/embed/map/Green-SF-Now-Priority-Greening-Projects-h9CNPq7OVQKaRNJy7i2H5kC?loc=37.745,-122.42,12z&legend=0&cooperativeGestures=1&link=1&geolocation=0&zoomControls=1&scaleBar=1" referrerpolicy="strict-origin-when-cross-origin" allow="geolocation"></iframe>
+            <nav class="map-project-list" aria-label="Projects list">
+              <h3>Projects</h3>
+              <div id="map-project-links"></div>
+            </nav>
+          </div>
         </div>
       </div>
     </section>
@@ -418,6 +559,64 @@
     document.querySelector('.mobile-menu-button').addEventListener('click', function () {
       document.querySelector('.nav-links').classList.toggle('active');
     });
+
+    (function () {
+      const grid = document.querySelector('.projects-grid');
+      const cards = Array.from(grid.querySelectorAll('.project-card'));
+      const sortSelect = document.getElementById('sort-select');
+      const sortControl = document.getElementById('sort-control');
+      const listView = document.getElementById('list-view');
+      const mapView = document.getElementById('map-view');
+      const listBtn = document.getElementById('view-list-btn');
+      const mapBtn = document.getElementById('view-map-btn');
+      const mapLinks = document.getElementById('map-project-links');
+
+      function sortCards(order) {
+        const sorted = cards.slice().sort((a, b) => {
+          const da = a.dataset.posted || '';
+          const db = b.dataset.posted || '';
+          return order === 'oldest' ? da.localeCompare(db) : db.localeCompare(da);
+        });
+        sorted.forEach(c => grid.appendChild(c));
+      }
+
+      function buildMapLinks() {
+        const sorted = cards.slice().sort((a, b) => {
+          const ta = a.querySelector('.project-title').textContent.trim();
+          const tb = b.querySelector('.project-title').textContent.trim();
+          return ta.localeCompare(tb);
+        });
+        mapLinks.innerHTML = '';
+        sorted.forEach(card => {
+          const title = card.querySelector('.project-title').textContent.trim();
+          const location = card.querySelector('.project-location').textContent.trim();
+          const a = document.createElement('a');
+          a.href = card.getAttribute('href');
+          a.innerHTML = '<span class="mp-title"></span><span class="mp-location"></span>';
+          a.querySelector('.mp-title').textContent = title;
+          a.querySelector('.mp-location').textContent = location;
+          mapLinks.appendChild(a);
+        });
+      }
+
+      function setView(view) {
+        const isMap = view === 'map';
+        listView.hidden = isMap;
+        mapView.hidden = !isMap;
+        sortControl.style.visibility = isMap ? 'hidden' : 'visible';
+        listBtn.classList.toggle('active', !isMap);
+        mapBtn.classList.toggle('active', isMap);
+        listBtn.setAttribute('aria-selected', String(!isMap));
+        mapBtn.setAttribute('aria-selected', String(isMap));
+      }
+
+      sortSelect.addEventListener('change', e => sortCards(e.target.value));
+      listBtn.addEventListener('click', () => setView('list'));
+      mapBtn.addEventListener('click', () => setView('map'));
+
+      sortCards('newest');
+      buildMapLinks();
+    })();
   </script>
 </body>
 
