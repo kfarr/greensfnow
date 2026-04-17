@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carolina Greenway - Green SF Now</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="projects.css">
+</head>
+
+<body>
+  <nav class="bg-tan sticky">
+    <div class="nav-container">
+      <a href="/" class="logo">
+        <img src="/images/green-sf-now-sierra-club-grassroots.webp" alt="Green SF Now Logo" class="logo-img">
+      </a>
+      <div class="menu">
+        <button class="mobile-menu-button">
+          <span class="sr-only">Open main menu</span>
+          <svg class="menu-icon" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+        <div class="nav-links">
+          <a href="/projects/" class="nav-link">Projects</a>
+          <a href="/#events" class="nav-link">Events</a>
+          <a href="/blog/" class="nav-link">Blog</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="breadcrumb">
+    <a href="/">Home</a> &gt; <a href="/projects/">Projects</a> &gt; Carolina Greenway
+  </div>
+
+  <main>
+    <section class="project-hero">
+      <div class="section-container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Carolina Greenway</h1>
+            <p>A safe, green walking route for schoolchildren and community members from Potrero Hill to the heart of the Showplace Design District — reconnecting neighborhoods with a continuous corridor of native plants, street trees, biodiversity habitat, and bioswale stormwater infrastructure.</p>
+          </div>
+          <div class="hero-cta">
+            <h3>Take Action to Support This Project</h3>
+            <div class="hero-cta-buttons">
+              <button onclick="generateSupportEmail()" class="cta-button">
+                📧 Send Letter of Support
+              </button>
+              <button onclick="contactSteward()" class="cta-button">
+                🤝 Contact the Steward
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-container">
+        <div class="project-details">
+          <div class="project-detail-card">
+            <h3>📍 Location</h3>
+            <p>The Carolina Greenway is a continuous corridor spanning four connected segments:</p>
+            <ul>
+              <li><strong>Carolina St, Mariposa to 17th</strong> — fronting the to-be-renovated Jackson Park</li>
+              <li><strong>Carolina St, 17th to 16th</strong> — an unaccepted street block with significant greening potential</li>
+              <li><strong>Carolina St, 16th to 15th</strong> — currently near-zero tree canopy or greening</li>
+              <li><strong>15th St, Carolina to De Haro</strong> — the connection to the forthcoming Live Oak school annex</li>
+            </ul>
+            <p><strong>Neighborhoods:</strong> Potrero Hill ↔ Showplace Square / Design District<br>
+            <strong>Adjacent:</strong> Jackson Park, Live Oak School (current + future annex), Potrero Hill Montessori, Showplace Square Design District, former Anchor Brewing properties</p>
+          </div>
+
+          <div class="project-detail-card">
+            <h3>🌱 Project Vision</h3>
+            <p>The Carolina Greenway is a neighborhood-scale vision of a continuous green route that gives Potrero Hill's kids and families a safe, shaded, biodiverse walk down the hill and into Showplace Square and vice versa. Live Oak students will be able to walk from the main campus at Mariposa and Arkansas, through a renovated Jackson Park, down the Carolina Greenway, and across 15th Street to the new Live Oak annex — all under tree canopy, alongside native plants, with traffic calmed and stormwater captured in bioswales.</p>
+            <p style="margin-top: 1rem;">The greenway stitches together four very different blocks — a park frontage, an unaccepted street, a treeless corridor, and a school-annex connector — into a single, coherent pedestrian-first spine linking Potrero Hill to the Design District.</p>
+          </div>
+
+          <div class="project-detail-card">
+            <h3>🤝 Supporters & Advocates</h3>
+            <p><strong>Lead Advocates:</strong> Friends of Jackson Park, Green SF Now, Sierra Club SF Group<br>
+            <strong>Key Stakeholders:</strong> Live Oak School, Potrero Hill Montessori, Showplace Square / Design District businesses, Potrero Hill neighbors, Fletcher Studio, Friends of the Urban Forest<br>
+            <strong>Contact:</strong> <a href="mailto:info@friendsofjacksonpark.org">info@friendsofjacksonpark.org</a></p>
+          </div>
+
+          <div class="project-detail-card">
+            <h3>💰 Potential Funding Sources</h3>
+            <p><strong>City Programs:</strong> SFPUC Green Infrastructure Grant Program, DPW street tree program, SF Urban Forestry Council initiatives<br>
+            <strong>State Funding:</strong> California Urban Greening Program, California Natural Resources Agency grants<br>
+            <strong>Private:</strong> Developer contributions tied to redevelopment of the former Anchor Brewing properties and other Showplace Square projects; school and foundation partnerships tied to the Live Oak annex</p>
+          </div>
+        </div>
+
+        <div class="project-detail-card">
+          <h3>🗺️ Site Location Map</h3>
+          <p><strong>Corridor:</strong> Carolina Street from Mariposa to 15th, plus 15th Street from Carolina to De Haro</p>
+          <iframe width="100%" height="488" frameborder="0" title="Felt Map" src="https://felt.com/embed/map/Green-SF-Now-Priority-Greening-Projects-h9CNPq7OVQKaRNJy7i2H5kC?loc=37.765916%2C-122.400444%2C16.8z&legend=0&cooperativeGestures=1&link=1&geolocation=0&zoomControls=1&scaleBar=1" referrerpolicy="strict-origin-when-cross-origin" style="border-radius: 0.5rem; margin: 1rem 0;"></iframe>
+          <p><em>Interactive map showing the Carolina Greenway corridor linking Potrero Hill to Showplace Square</em></p>
+        </div>
+
+        <div class="project-detail-card">
+          <h3>🌳 Why This Corridor</h3>
+          <ul>
+            <li><strong>Safe route for kids:</strong> Gives Live Oak and Potrero Hill Montessori students a continuous, traffic-calmed walking route from home and school</li>
+            <li><strong>Hill-to-Design-District connection:</strong> Provides Potrero Hill residents a green pedestrian spine into the heart of the Showplace Design District</li>
+            <li><strong>Fills a canopy gap:</strong> Carolina between 15th and 16th is nearly devoid of street trees or greening today — a high-impact place to add canopy and habitat</li>
+            <li><strong>Unaccepted street opportunity:</strong> Carolina between 16th and 17th is unaccepted, creating design flexibility without standard street-acceptance constraints</li>
+            <li><strong>Park-adjacent multiplier:</strong> Carolina from Mariposa to 17th already benefits from the planned Jackson Park extension (6 feet into Carolina, 200 feet from Mariposa) — a natural anchor for the greenway</li>
+            <li><strong>Biodiversity &amp; native plants:</strong> A continuous corridor supports pollinators and wildlife far better than isolated plantings</li>
+            <li><strong>Stormwater management:</strong> Bioswales and permeable surfaces along four blocks capture and filter meaningful runoff volumes</li>
+            <li><strong>Excess street width:</strong> Carolina is wider than its traffic needs require; through traffic is minimal and most use is parking-related</li>
+          </ul>
+        </div>
+
+        <div class="project-detail-card">
+          <h3>📈 Current Status</h3>
+          <p><strong>Phase:</strong> Vision & Coalition Building</p>
+          <p><strong>Recent Progress:</strong>
+          <ul>
+            <li>Working with Fletcher Studio and Friends of the Urban Forest on design elements</li>
+            <li>Utility surveying completed in the Jackson Park area</li>
+            <li>DPW street tree commitment secured for the park-adjacent block</li>
+            <li>Engaging Live Oak, Potrero Hill Montessori, and Showplace Square stakeholders to align around the school-access vision</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <span>© 2025 Green SF Now</span>
+        <div class="footer-links">
+          <a href="/#what" class="footer-link">What</a>
+          <a href="/#why" class="footer-link">Why</a>
+          <a href="/#contact" class="footer-link">Contact</a>
+          <a href="https://github.com/kfarr/greensfnow" class="footer-link">Edit on Github</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Simple mobile menu toggle
+    document.querySelector('.mobile-menu-button').addEventListener('click', function () {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+
+    // Generate support email for Carolina Greenway
+    function generateSupportEmail() {
+      const recipients = [
+        'daniel.lurie@sfgov.org',
+        'carla.short@sfdpw.org',
+        'dennis.herrera@sfwater.org',
+        'sminick@sfwater.org',
+        'julie.kirschbaum@sfmta.com',
+        'alexandra.c.sweet@sfgov.org',
+        'a.john-baptiste@sfgov.org',
+        'amar.bhardwaj.myr@sfgov.org',
+        'javier.rivera@sfdpw.org',
+        'logan.hehn@sfdpw.org',
+        'giprojects@sfwater.org',
+        'DorseyStaff@sfgov.org',
+        'waltonstaff@sfgov.org'
+      ];
+
+      const ccRecipients = [
+        'CColwick@sfwater.org',
+        'Viktoriya.a.wise@sfmta.com'
+      ];
+
+      const bccRecipients = [
+        'kieran.farr@gmail.com'
+      ];
+
+      const subject = "I support the Carolina Greenway - A Safe Green Route from Potrero Hill to Showplace Square";
+
+      const emailBody = `Dear Mayor Lurie, Supervisors Walton and Dorsey, and City agency staff,
+
+As a resident of San Francisco, I'm writing to express my strong support for the Carolina Greenway — a continuous green pedestrian corridor connecting Potrero Hill through Jackson Park and into the heart of the Showplace Design District.
+
+The Carolina Greenway is a neighborhood-scale vision spanning four connected segments: Carolina Street from Mariposa to 17th (fronting the to-be-renovated Jackson Park), Carolina between 16th and 17th (an unaccepted street), Carolina between 15th and 16th (currently nearly devoid of tree canopy), and 15th Street between Carolina and De Haro (the connection to the forthcoming Live Oak school annex).
+
+The core purpose is safe access for schoolchildren and community members. Live Oak students will be able to walk from the main campus at Mariposa and Arkansas, through a renovated Jackson Park, down the Carolina Greenway, and across 15th Street to the new Live Oak annex — under tree canopy, alongside native plants, with traffic calmed and stormwater captured in bioswales. Potrero Hill Montessori students and families benefit from the same safe, green route, and Potrero Hill residents gain a welcoming pedestrian spine into the Design District.
+
+This corridor fills real gaps: the block of Carolina between 15th and 16th has almost no street trees today; the 16th-to-17th block is unaccepted, offering design flexibility; and the Mariposa-to-17th block already benefits from the approved Jackson Park boundary extension and a DPW street tree commitment. Together these segments become a continuous biodiversity and stormwater corridor far more impactful than any single block in isolation.
+
+The timing is ideal. Jackson Park improvements are underway, the Live Oak annex is moving forward, and redevelopment of former Anchor Brewing properties and other Showplace Square sites creates leverage for coordinated greenway design and funding.
+
+This project aligns squarely with San Francisco's climate goals, stormwater management priorities, urban forest targets, and commitment to safe, equitable green spaces that connect our neighborhoods.
+
+If you're not familiar with the project details, please visit: https://greensfnow.org/projects/carolina-greenway.html
+
+I hope we can count on your support for bringing the Carolina Greenway to life.
+
+Thank you for your time and consideration.
+
+Sincerely,`;
+
+      // Create mailto URL with all recipients
+      const mailtoUrl = `mailto:${recipients.join(',')}?cc=${ccRecipients.join(',')}&bcc=${bccRecipients.join(',')}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+
+      // Open email client
+      window.location.href = mailtoUrl;
+    }
+
+    // Contact steward email
+    function contactSteward() {
+      const mailtoUrl = 'mailto:info@friendsofjacksonpark.org?subject=Carolina%20Greenway%20Inquiry';
+      window.location.href = mailtoUrl;
+    }
+  </script>
+</body>
+
+</html>
