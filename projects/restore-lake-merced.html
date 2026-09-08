@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restore Lake Merced - Green SF Now</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="projects.css">
+  <style>
+    /* Cycling photo hero — Restore Lake Merced */
+    .project-hero {
+      position: relative;
+      overflow: hidden;
+      background: none;
+      min-height: 420px;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      animation: heroFade 18s infinite;
+    }
+
+    .hero-bg-1 {
+      background-image: url('images/lake-merced-west-aerial.webp');
+      animation-delay: 0s;
+    }
+
+    .hero-bg-2 {
+      background-image: url('images/lake-merced-rowers.webp');
+      animation-delay: 6s;
+    }
+
+    .hero-bg-3 {
+      background-image: url('images/lake-merced-boat-survey.webp');
+      animation-delay: 12s;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+      z-index: 1;
+    }
+
+    .project-hero .section-container {
+      position: relative;
+      z-index: 2;
+    }
+
+    @keyframes heroFade {
+      0%   { opacity: 1; }
+      28%  { opacity: 1; }
+      33%  { opacity: 0; }
+      95%  { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    .hero-text {
+      flex: 1 1 0;
+    }
+
+    .hero-cta {
+      flex: 0 0 auto;
+      max-width: 400px;
+    }
+
+    .site-key-img {
+      width: 100%;
+      border-radius: 0.5rem;
+      margin: 1rem 0;
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="bg-tan sticky">
+    <div class="nav-container">
+      <a href="/" class="logo">
+        <img src="/images/green-sf-now-sierra-club-grassroots.webp" alt="Green SF Now Logo" class="logo-img">
+      </a>
+      <div class="menu">
+        <button class="mobile-menu-button">
+          <span class="sr-only">Open main menu</span>
+          <svg class="menu-icon" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+        <div class="nav-links">
+          <a href="/projects/" class="nav-link">Projects</a>
+          <a href="/#events" class="nav-link">Events</a>
+          <a href="/blog/" class="nav-link">Blog</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="breadcrumb">
+    <a href="/">Home</a> &gt; <a href="/projects/">Projects</a> &gt; Restore Lake Merced
+  </div>
+
+  <main>
+    <section class="project-hero">
+      <div class="hero-bg hero-bg-1"></div>
+      <div class="hero-bg hero-bg-2"></div>
+      <div class="hero-bg hero-bg-3"></div>
+      <div class="hero-overlay"></div>
+      <div class="section-container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Restore Lake Merced</h1>
+            <p>Recreate. Educate. Research. Restore. A community-led proposal to transform the 9.5-acre Lake Merced West site into a public aquatics, arts, and hydrology hub, and to restore the lake itself so that one day San Franciscans can swim in it again.</p>
+          </div>
+          <div class="hero-cta">
+            <h3>Take Action to Support This Project</h3>
+            <div class="hero-cta-buttons">
+              <button onclick="generateSupportEmail()" class="cta-button">
+                📧 Send Letter of Support
+              </button>
+              <a href="https://www.westsidewaterresources.org/lake-merced" target="_blank" rel="noopener noreferrer" class="cta-button">
+                🌊 Learn More at Westside Water Resources
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background: var(--color-fern);">
+      <div class="section-container">
+        <div class="project-details">
+          <div class="project-detail-card">
+            <h3>📍 Location</h3>
+            <ul>
+              <li><strong>Site:</strong> Lake Merced West, a 9.5-acre parcel on John Muir Drive along the southwest shore of Lake Merced (former Pacific Rod &amp; Gun Club site), owned by SFPUC and managed by SF Recreation &amp; Parks</li>
+              <li><strong>Neighborhood:</strong> Lake Merced / Lakeshore / Parkmerced, southwest San Francisco</li>
+              <li><strong>District:</strong> Supervisor Myrna Melgar (District 7); District 4 (Supervisor Alan Wong) runs to the lake's north shore</li>
+              <li><strong>Key Connections:</strong> Directly across from the San Francisco Zoo and the Janet Pomeroy Recreation &amp; Rehabilitation Center; Sunset Dunes park and Ocean Beach; Fort Funston; Harding Park and the golf courses ringing the lake; SF State University; Stonestown Galleria; Lakewood Apartments across John Muir Drive</li>
+            </ul>
+          </div>
+
+          <div class="project-detail-card">
+            <h3>🌱 Project Overview</h3>
+            <p><a href="https://www.westsidewaterresources.org/lake-merced" target="_blank">Restore Lake Merced</a> is a strategic initiative of <a href="https://www.westsidewaterresources.org/" target="_blank">Westside Water Resources</a>, a San Francisco nonprofit. It treats the Lake Merced West site as both a foothold and a billboard for restoring the entire Lake Merced watershed.</p>
+            <ul>
+              <li><strong>The problem:</strong> Lake Merced is listed by the State of California and the U.S. EPA as a Category 5 impaired water body, one of the most severe classifications. The water is not suitable for human contact.</li>
+              <li><strong>Why:</strong> For roughly 86 years, human intervention has cut the lake off from the ocean. Historically the lake drained to the Pacific in wet years. Today it is a terminal water body: everything that flows in stays in, concentrating nutrients and pollutants.</li>
+              <li><strong>The vision:</strong> Restore the lake's water quality and natural water balance so it can be removed from the impaired water bodies list entirely, while building a public recreation, education, and research campus on the shoreline.</li>
+              <li><strong>Public, not private:</strong> Westside Water Resources plans to develop the 9.5 acres, then give the capital improvements back to the City, with the asset managed by a citizen-run special district: a publicly operated amenity rather than a private concession.</li>
+            </ul>
+          </div>
+
+          <div class="project-detail-card">
+            <h3>🤝 Stewards &amp; Partners</h3>
+            <ul>
+              <li><strong>Project Lead:</strong> <a href="https://www.westsidewaterresources.org/" target="_blank">Westside Water Resources</a> (Doug Jacuzzi)</li>
+              <li><strong>Core Design &amp; Development Team:</strong> <a href="https://www.waterpowerlaw.com/" target="_blank">Water and Power Law Group PC</a>, <a href="https://www.scapestudio.com/" target="_blank">SCAPE</a> (landscape architecture), <a href="https://www.reddotstudio.com/" target="_blank">Red Dot Studio</a> (architecture, Karen Curtiss), <a href="https://www.aquastry.com/" target="_blank">Aquastry</a> (water treatment), <a href="https://www.sherwoodengineers.com/" target="_blank">Sherwood Design Engineers</a></li>
+              <li><strong>Coalition Partners:</strong> CalTrout, Golden Gate Bird Alliance, Pacific Rowing Club, St. Ignatius rowing, Our Children's Earth Foundation, Environmental Advocates, EcoRights, and other conservation and recreation groups</li>
+              <li><strong>Education Partners (in discussion):</strong> San Francisco Unified School District, City College of San Francisco, San Francisco State University</li>
+              <li><strong>Government Partners:</strong> SF Recreation &amp; Parks (site manager), SFPUC (property owner), Supervisor Melgar's District 7 office, Supervisor Wong's District 4 office</li>
+            </ul>
+          </div>
+
+          <div class="project-detail-card">
+            <h3>💰 Potential Funding Sources</h3>
+            <ul>
+              <li><strong>Near-Term:</strong> The Rec &amp; Park Lake Merced West RFP offers an opportunity to secure the site; capital to be aggregated from other sources</li>
+              <li><strong>Philanthropy &amp; Grants:</strong> Foundation and individual philanthropy plus state and federal water quality, habitat, and recreation grants are the first layer of the capital stack</li>
+              <li><strong>SFPUC Programs:</strong> SFPUC Green Infrastructure Grants and capital programs for the shoreline and John Muir Drive stormwater work; a proposed SFPUC public-education presence at the Center for Hydrological Thinking telling the story of the water system from Hetch Hetchy to the tap</li>
+              <li><strong>Already Awarded:</strong> Westside Water Resources has been approved for a $2.5M SFPUC Green Infrastructure Grant to capture rooftop stormwater at the Lakewood Apartments across John Muir Drive, water that can feed greening in the street and on the site</li>
+              <li><strong>Long-Term:</strong> A citizen-run special district could finance the remaining gap through institutional borrowing and manage the completed facility for the public</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="project-detail-card">
+          <h3>🗺️ Site Location Map</h3>
+          <p><strong>Site:</strong> Lake Merced West, John Muir Drive at the west shore of Lake Merced<br>
+          <strong>Opportunity:</strong> A 9.5-acre lakefront parcel, long fenced off, that can anchor restoration of the whole watershed</p>
+
+          <iframe width="100%" height="400" frameborder="0" title="Felt Map" src="https://felt.com/embed/map/Green-SF-Now-Priority-Greening-Projects-h9CNPq7OVQKaRNJy7i2H5kC?loc=37.7175,-122.4985,15.5z&legend=0&cooperativeGestures=1&link=1&geolocation=1&zoomControls=1&scaleBar=1" referrerpolicy="strict-origin-when-cross-origin" style="border-radius: 0.5rem; margin: 1rem 0;"></iframe>
+
+          <p><em>Interactive map centered on the Lake Merced West parcel along John Muir Drive.</em></p>
+        </div>
+
+        <div class="project-detail-card">
+          <h3>🏗️ Proposed Improvements</h3>
+          <p>The plan follows four keywords, in this order: <strong>Recreate, Educate, Research, Restore.</strong></p>
+          <ul>
+            <li><strong>Recreate: Aquatics Center &amp; Boathouse:</strong> A world-class aquatic athletics center and boathouse building on the recreation the lake already hosts: rowing, paddling, and sailing</li>
+            <li><strong>Recreate: Shoreline Caf&eacute;:</strong> A lakeside caf&eacute; with a cantilevered deck over the water</li>
+            <li><strong>Educate: Center for Hydrological Thinking:</strong> Facilities for science and art centered on hydrology, with a proposed SFPUC presence explaining the whole water system from the Hetch Hetchy highlands to the westside aquifer</li>
+            <li><strong>Educate: Living Laboratory:</strong> A Lake Merced Center for the Arts and hands-on programs for SFUSD, City College, and SF State students</li>
+            <li><strong>Research &amp; Restore: Water Quality:</strong> Reduce phosphorus and nitrogen loading from the immediate shoreline with new wetland treatment cells, and restore the lake's chemistry so it can be delisted as an impaired water body</li>
+            <li><strong>Restore: Watershed &amp; Flow-Through:</strong> Raise the Westside Basin aquifer so the lake once again overflows to the ocean in wet years, ending its status as a terminal water body; rehabilitate the historic Lake Merced portal, overflow, and drainage tunnel to the ocean outfall</li>
+            <li><strong>Restore: Native Species:</strong> Rehabilitate native fish and aquatic species still found in similar North Coast water bodies, and over the long term reintroduce species lost from Lake Merced, while protecting sensitive bird habitat at Night Heron Cove</li>
+            <li><strong>Restore: Vista Grande Trail:</strong> Incorporate a public trail into the Vista Grande Canal drainage improvements</li>
+            <li><strong>Green John Muir Drive:</strong> Rebuild the quarter-mile-plus roadway fronting the site as a model green street (rain gardens, bioswales, street trees, and a multi-use path) fed by rooftop stormwater from the Lakewood Apartments. Utility trenching for the site will already puncture the roadway, so putting it back together green is the natural sequence.</li>
+          </ul>
+        </div>
+
+        <div class="project-detail-card">
+          <h3>📐 &ldquo;What If?&rdquo; Site Concept</h3>
+          <p>Westside Water Resources' four-sheet concept compilation (June 2025) walks from the current fenced site to a restored shoreline. The final sheet keys the concept: wetland cells, rehabilitated portal and overflow, boathouse, caf&eacute;, Center for Hydrological Thinking, Night Heron Cove, and the Vista Grande drainage tunnel to the ocean outfall. Ideas are still evolving; treat this as a general footprint rather than a final design.</p>
+          <a href="images/lake-merced-west-what-if-site-key.webp" target="_blank">
+            <img src="images/lake-merced-west-what-if-site-key-thumb.webp" alt="Restore Lake Merced 'What If?' keyed site concept for Lake Merced West" class="site-key-img">
+          </a>
+          <p><em>Click to enlarge. Concept sheet RLM-4, Westside Water Resources / Soularch Design.</em> See also the <a href="https://drive.google.com/file/d/1OxKrTDXJG1OulRtiiCnynI72V6Xle5fZ/view?usp=sharing" target="_blank">Lake Merced West Proposal</a>.</p>
+        </div>
+
+        <div class="project-detail-card">
+          <h3>🎯 Project Goals</h3>
+          <ul>
+            <li><strong>A swimmable Lake Merced</strong> removed from the state and federal impaired water bodies list</li>
+            <li><strong>A living lake</strong> with restored flow-through to the ocean and rehabilitated native species</li>
+            <li><strong>A public recreation and education campus</strong> at Lake Merced West, owned by the City and run for the public</li>
+            <li><strong>A regional model</strong> for urban watershed stewardship, with John Muir Drive as the poster child for greening a roadway</li>
+          </ul>
+        </div>
+
+        <div class="project-detail-card">
+          <h3>📈 Current Status</h3>
+          <ul>
+            <li><strong>Phase:</strong> Capacity building and schematic design</li>
+            <li><strong>Coalition:</strong> Bringing together CalTrout, rowing clubs, bird and environmental advocates, and educational institutions in support of the Lake Merced West proposal</li>
+            <li><strong>Funding:</strong> $2.5M SFPUC Green Infrastructure Grant approved for Lakewood Apartments stormwater capture across the street; pursuing philanthropy, grants, and funding consultants for the broader project</li>
+            <li><strong>Letters of Support:</strong> Now being collected; see the buttons at the top of this page</li>
+          </ul>
+        </div>
+
+        <div class="project-detail-card">
+          <h3>📸 Project Gallery</h3>
+          <div class="gallery-grid">
+            <a href="images/lake-merced-west-aerial.webp" target="_blank" class="gallery-item">
+              <img src="images/lake-merced-west-aerial.webp" alt="Aerial view of the Lake Merced West site along the shoreline">
+              <div class="gallery-caption">Lake Merced West site today, fenced and unused on the lakeshore</div>
+            </a>
+            <a href="images/lake-merced-rowers.webp" target="_blank" class="gallery-item">
+              <img src="images/lake-merced-rowers.webp" alt="Rowers on Lake Merced">
+              <div class="gallery-caption">Rowing on Lake Merced, already a recreation hub</div>
+            </a>
+            <a href="images/lake-merced-boat-survey.webp" target="_blank" class="gallery-item">
+              <img src="images/lake-merced-boat-survey.webp" alt="Survey boat on Lake Merced with tule marsh shoreline">
+              <div class="gallery-caption">On the water along the tule-lined shore</div>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-detail-card">
+          <h3>📰 Related Links</h3>
+          <ul>
+            <li><a href="https://www.westsidewaterresources.org/lake-merced" target="_blank">Westside Water Resources: Restore Lake Merced</a></li>
+            <li><a href="https://drive.google.com/file/d/1OxKrTDXJG1OulRtiiCnynI72V6Xle5fZ/view?usp=sharing" target="_blank">Lake Merced West Proposal (PDF)</a></li>
+            <li><a href="https://www.westsidewaterresources.org/s/20250716_WhatIfMeeting.pdf" target="_blank">Red Dot Studio: &ldquo;What If&rdquo; Meeting Slide Deck</a></li>
+            <li><a href="https://www.waterboards.ca.gov/water_issues/programs/tmdl/2023_2024state_ir_reports/apx-c-category-reports/category5_report.shtml" target="_blank">CA Water Board: Category 5 Impaired Water Bodies List</a></li>
+            <li><a href="https://www.sfpuc.gov/sites/default/files/documents/2022-0215_Lake-Merced-History_FactSheetrev.pdf" target="_blank">SFPUC: Lake Merced's Human and Natural History</a></li>
+            <li><a href="https://ceqanet.lci.ca.gov/Project/2021060231" target="_blank">CEQA: Lake Merced West Project Description</a></li>
+            <li><a href="/blog/#2025-07-17">Green SF Now: San Francisco Watersheds 101 webinar with Doug Jacuzzi and Karen Curtiss</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <span>© 2026 Green SF Now</span>
+        <div class="footer-links">
+          <a href="/#what" class="footer-link">What</a>
+          <a href="/#why" class="footer-link">Why</a>
+          <a href="/#contact" class="footer-link">Contact</a>
+          <a href="https://github.com/kfarr/greensfnow" class="footer-link">Edit on Github</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Simple mobile menu toggle
+    document.querySelector('.mobile-menu-button').addEventListener('click', function () {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+
+    // Letter of support for Restore Lake Merced (individuals or organizations)
+    function generateSupportEmail() {
+      const recipients = ['dj@westsidewaterresources.org'];
+      const bccRecipients = ['kieran.farr@gmail.com'];
+
+      const subject = "Letter of Support: Restore Lake Merced / Lake Merced West";
+
+      const emailBody = `Dear Westside Water Resources,
+
+As a [San Francisco resident / supporter / representative of ORGANIZATION NAME], I am writing to express my support for the Restore Lake Merced initiative and the Westside Water Resources proposal for Lake Merced West.
+
+Lake Merced is one of San Francisco's greatest natural assets, yet it is listed as a Category 5 impaired water body and is not safe for human contact. Restore Lake Merced proposes to change that by restoring the lake's water quality and natural flow to the ocean, rehabilitating native species, and transforming the 9.5-acre Lake Merced West site into a public aquatics center, shoreline cafe, and Center for Hydrological Thinking that serves as a living laboratory for San Francisco students. We are especially supportive of the commitment to return the completed improvements to the City so the site remains a public amenity.
+
+[Add one or two sentences about why this matters to you or your organization.]
+
+I look forward to seeing Westside Water Resources and its partners make a swimmable, thriving Lake Merced a reality.
+
+Sincerely,
+
+[NAME]
+[TITLE AND ORGANIZATION, IF APPLICABLE]
+
+---
+Organizations: please also attach this letter as a PDF on letterhead. For more information: https://greensfnow.org/projects/restore-lake-merced.html`;
+
+      const mailtoUrl = `mailto:${recipients.join(',')}?bcc=${bccRecipients.join(',')}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+      window.location.href = mailtoUrl;
+    }
+  </script>
+</body>
+
+</html>
